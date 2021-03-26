@@ -26,28 +26,28 @@ import Icons from "views/examples/Icons.js";
 var routes = [
   {
     path: "/index",
-    name: "Dashboard",
+    name: "Classes",
     icon: "ni ni-tv-2 text-primary",
     component: Index,
     layout: "/admin",
   },
   {
     path: "/icons",
-    name: "Icons",
+    name: "Lectures",
     icon: "ni ni-planet text-blue",
     component: Icons,
     layout: "/admin",
   },
   {
     path: "/maps",
-    name: "Maps",
+    name: "Topic",
     icon: "ni ni-pin-3 text-orange",
     component: Maps,
     layout: "/admin",
   },
   {
     path: "/user-profile",
-    name: "User Profile",
+    name: "Study",
     icon: "ni ni-single-02 text-yellow",
     component: Profile,
     layout: "/admin",
