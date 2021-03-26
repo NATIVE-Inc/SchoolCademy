@@ -1,18 +1,96 @@
-# Code Name
-## **SchoolCademy**   (`temporary`)
+# Cademy
+<details>
+  <summary>Background</summary>
 
-# One-Line Description 
-> School is Fun
+## Problem statement 
+African education is slow in its integration and expansion, most students have difficulties understanding what they are being taught at school and instructors aren't able to help every single student. There is a need for a more comprehensive explanation of notes for students to better understand. 
 
-# Problem Statement 
-Students often tend to feel a subject or lesson is very difficult when they know nothing about it or when its not explained to them very well. Every instructor has individual teaching skills but even with years of experience these don't guarantee that every student will understand the lesson adequately, and communication is deterimental for good comprehension of a lesson.
+## Solution 
+A system which seeks to make lectures more understandable and follow up with the progress of students. This system will provide the full syllabus for all levels of secondary education with countless questions & answers for students to better understand. It will follow up the progress of students as they go through levels and award the certifications. 
 
-# Solution 
-SchoolCademy is an application designed to provide comprehensive explanations and evaluations of lessons students receive at different levels of their education( Primary - University ). 
+</details>
+<details>
+  <summary>Installation</summary>
+  
+## How to install 
+This project is built with react, use the follow code to install 
 
-### Features 
- - Feed back  
- - Simple to Understand
- - Comprehensive Evaluations
- - Progress analysis and Report generation
- - Simple user interface
+`npm install && npm start`
+
+</details>
+
+<details>
+  <summary>Data Structure</summary>
+  
+## Data 
+*Format DB*: NoSql
+
+## Syntax
+
+Students 
+```
+{
+    name: <student name>,
+    level: <form1>,
+    age: <12>,
+    language: <fr-en>, 
+    town: <yaounde>,
+    school: <lycee>, 
+    progress: {
+        LecturesEnrolled: [], 
+        LecturesCompleted: [], 
+        LecturesOngoing: [
+            {
+                name: <name of lectures>,
+                topicsCompleted: [],
+            }
+        ],
+    }
+
+}
+```
+
+Classes (levels)
+```
+{
+    level: <form1>,
+    lectures: {},
+    enrolled: <number>,
+}
+```
+
+Lectures
+```
+{
+    name: <name of lecture>,
+    topics: {},
+    level: <form1>, 
+    duration: <time>,
+    difficulty: <rating>,
+
+}
+```
+
+Topics
+```
+{
+    title: <title of topic>
+    sections: [
+        {
+            number: <section number>,
+            subTitle: <sub title of section>,
+            content: <content>, 
+        }
+    ],
+    duration: <time>,
+    description: <long text>,
+    quiz: [
+        {
+            question: <quiz question>,
+            answer: <answer of question>
+        }
+    ]
+
+}
+```
+</details>
