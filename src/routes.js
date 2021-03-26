@@ -26,21 +26,21 @@ import Icons from "views/examples/Icons.js";
 var routes = [
   {
     path: "/index",
-    name: "Classes",
+    name: "Lectures",
     icon: "ni ni-tv-2 text-primary",
     component: Index,
     layout: "/admin",
   },
   {
     path: "/icons",
-    name: "Lectures",
+    name: "Topics",
     icon: "ni ni-planet text-blue",
     component: Icons,
     layout: "/admin",
   },
   {
     path: "/maps",
-    name: "Topic",
+    name: "Sections",
     icon: "ni ni-pin-3 text-orange",
     component: Maps,
     layout: "/admin",
