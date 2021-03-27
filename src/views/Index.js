@@ -182,7 +182,6 @@ const Index = (props) => {
 						</Card>
 					</Col>
 				</Row>
-				f
 			</Container>
 		</>
   );
