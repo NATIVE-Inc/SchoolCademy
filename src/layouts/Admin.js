@@ -65,21 +65,18 @@ const Admin = (props) => {
   };
 
   return (
-    <>
-      <div className="main-content" ref={mainContent}>
-        <AdminNavbar
-          {...props}
-          brandText={getBrandText(props.location.pathname)}
-        />
-        <Switch>
-          {getRoutes(routes)}
-          <Redirect from="*" to="/admin/index" />
-        </Switch>
-        <Container fluid>
-          <AdminFooter />
-        </Container>
-      </div>
-    </>
+		<>
+			<div className="main-content" ref={mainContent}>
+				<AdminNavbar {...props} brandText={getBrandText(props.location.pathname)} />
+				<Switch>
+					{getRoutes(routes)}
+					<Redirect from="*" to="/admin/index" />
+				</Switch>
+				<Container fluid className="bg-gradient-default mt-7">
+					<AdminFooter />
+				</Container>
+			</div>
+		</>
   );
 };
 
