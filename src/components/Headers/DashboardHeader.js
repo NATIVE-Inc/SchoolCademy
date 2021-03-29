@@ -6,11 +6,22 @@ import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 const Header = () => {
   return (
 		<>
-			<div className="header bg-gradient-info pb-8 pt-5 pt-md-8">
-				<Container fluid>
-					<div className="header-body">
+			<div
+				className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+				style={{
+					minHeight: '600px',
+					backgroundImage: 'url(' + require('../../assets/img/theme/profile-cover.jpg').default + ')',
+					backgroundSize: 'cover',
+					backgroundPosition: 'center top',
+				}}
+			>
+				{/* Mask */}
+				<span className="mask bg-gradient-default opacity-8" />
+				{/* Header container */}
+				<Container className="d-flex align-items-center" fluid>
+					<div className="header-body col-xl-12">
 						{/* Card stats */}
-						<Row className="justify-content-md-center">
+						<Row className="justify-content-md-center d-flex">
 							<Col xs="8">
 								<h1 className="display-1 text-white header-title">Think Forward</h1>
 								<p className="text-white header-subtitle">
