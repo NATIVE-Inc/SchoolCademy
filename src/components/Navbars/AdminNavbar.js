@@ -45,23 +45,25 @@ const AdminNavbar = (props) => {
 					<Link className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" to="/">
 						{props.brandText}
 					</Link>
-					<Form className="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-						<FormGroup className="mb-0">
-							<InputGroup className="input-group-alternative">
-								<InputGroupAddon addonType="prepend">
-									<InputGroupText>
-										<i className="fas fa-search" />
-									</InputGroupText>
-								</InputGroupAddon>
-								<Input placeholder="Search" type="text" />
-							</InputGroup>
-						</FormGroup>
-					</Form>
-
 					<Nav className="align-items-center d-none d-md-flex" navbar>
 						<NavItem>
 							<NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
-								Class: Form 1 <span className="sr-only">(current)</span>
+								Catalog
+							</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+								Paths
+							</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+								Nanodegree
+							</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+								Career Help
 							</NavLink>
 						</NavItem>
 						<UncontrolledDropdown nav>

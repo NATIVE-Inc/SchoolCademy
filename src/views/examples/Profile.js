@@ -180,20 +180,29 @@ const Profile = () => {
 									</div>
 								</Form>
 							</CardBody>
-              <CardFooter>
-                <Row>
-
-								<Col className="text-left" xs="6">
-									<Button color="primary" href="#pablo" onClick={(e) => e.preventDefault()} size="md">
-										Prev
-									</Button>
-								</Col>
-								<Col className="text-right" xs="6">
-									<Button color="primary" href="#pablo" onClick={(e) => e.preventDefault()} size="md">
-										Next
-									</Button>
-								</Col>
-                </Row>
+							<CardFooter>
+								<Row>
+									<Col className="text-left" xs="6">
+										<Button
+											color="primary"
+											href="#pablo"
+											onClick={(e) => e.preventDefault()}
+											size="md"
+										>
+											Prev
+										</Button>
+									</Col>
+									<Col className="text-right" xs="6">
+										<Button
+											color="primary"
+											href="#pablo"
+											onClick={(e) => e.preventDefault()}
+											size="md"
+										>
+											Next
+										</Button>
+									</Col>
+								</Row>
 							</CardFooter>
 						</Card>
 					</Col>
@@ -201,7 +210,7 @@ const Profile = () => {
 						<Card className="card-profile shadow">
 							<CardBody className="pt-0 pt-md-4">
 								<h2>Timeline</h2>
-								<SectionTimeline/>
+								<SectionTimeline />
 							</CardBody>
 						</Card>
 					</Col>

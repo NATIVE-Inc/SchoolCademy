@@ -21,15 +21,12 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 // reactstrap components
 import {
   Card,
-  CardHeader,
   CardImg,
   CardText,
-  CardTitle,
   CardBody,
   Container,
   Row,
   Col,
-  UncontrolledTooltip,
 } from "reactstrap";
 // core components
 import LectureHeader from "components/Headers/LectureHeader.js";

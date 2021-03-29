@@ -46,7 +46,7 @@ import {
   chartExample2,
 } from "variables/charts.js";
 
-import Header from "components/Headers/Header.js";
+import Header from "components/Headers/DashboardHeader.js";
 
 const Index = (props) => {
   const [activeNav, setActiveNav] = useState(1);
@@ -65,7 +65,11 @@ const Index = (props) => {
 		<>
 			<Header />
 			{/* Page content */}
-			<Container className="mt--7" fluid>
+			<Container fluid>
+				<Row className="mt-7 block-display">
+					<h1>World-Class Programs Built With Industry Experts</h1>
+					<p>Complete portfolio-ready projects and advance your career.</p>
+				</Row>
 				<Row className="mt-5">
 					<Col lg="6" xl="3">
 						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default">
