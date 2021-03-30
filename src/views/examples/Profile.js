@@ -17,15 +17,17 @@ import {
 // core components
 import SectionHeader from "components/Headers/SectionHeader.js";
 import SectionTimeline from "./SectionTimeline";
+import SectionSidebar from "../../components/Sidebar/SectionSidebar";
+import HeaderTopic from "components/Headers/HeaderTopic";
 
 const Profile = () => {
   return (
 		<>
-			<SectionHeader />
+			<HeaderTopic />
 			{/* Page content */}
 			<Container className="mt--7" fluid>
 				<Row>
-					<Col className="order-xl-2" xl="8">
+					<Col className="order-xl-2" xl="9">
 						<Card className="bg-secondary shadow">
 							<CardHeader className="bg-white border-0">
 								<Row className="align-items-center">
@@ -206,12 +208,9 @@ const Profile = () => {
 							</CardFooter>
 						</Card>
 					</Col>
-					<Col className="order-xl-1 mb-5 mb-xl-0" xl="4">
-						<Card className="card-profile shadow">
-							<CardBody className="pt-0 pt-md-4">
-								<h2>Timeline</h2>
-								<SectionTimeline />
-							</CardBody>
+					<Col className="order-xl-1 mb-5 mb-xl-0" xl="3">
+						<Card className=" shadow">
+							<SectionSidebar />
 						</Card>
 					</Col>
 				</Row>

@@ -23,3 +23,19 @@
   padding-top: 15px; }
 
   
+  /* timeline css  */
+ .vertical-timeline-element--work {
+     margin: 0 !important;
+ }
+.vertical-timeline-element-content {
+    padding: 0.4em !important;
+}
+
+.vertical-timeline::before {
+    background: rgb(33, 150, 243) !important;
+}
+
+.vertical-timeline-element-content {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
