@@ -1,9 +1,9 @@
 import React from 'react';
 
 // reactstrap components
-import { Card, CardBody, CardTitle, Container, Row, Col } from 'reactstrap';
+import { Card, CardBody, Container, Row, Col } from 'reactstrap';
 
-const LectureHeader = () => {
+const SubjectHeader = () => {
 	return (
 		<>
 			<div
@@ -64,4 +64,4 @@ const LectureHeader = () => {
 	);
 };
 
-export default LectureHeader;
+export default SubjectHeader;

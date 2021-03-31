@@ -4,12 +4,12 @@ import React from "react";
 import { Card, CardBody, CardTitle, Container, Row, Col, Progress } from 'reactstrap';
 
 // core components
-import HeaderTopic from "components/Headers/HeaderTopic";
+import TopicHeader from "components/Headers/TopicHeader";
 
-const Maps = () => {
+const Sections = () => {
   return (
 		<>
-			<HeaderTopic />
+			<TopicHeader />
 			{/* Page content */}
 			<Container className="mt--7" fluid>
 				<Row className="justify-content-center">
@@ -136,4 +136,4 @@ const Maps = () => {
   );
 };
 
-export default Maps;
+export default Sections;

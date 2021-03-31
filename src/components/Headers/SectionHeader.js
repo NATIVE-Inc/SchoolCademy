@@ -15,13 +15,13 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
-import { Button, Container, Row, Col } from "reactstrap";
+import { Container, Row, Col } from 'reactstrap';
 
 const SectionHeader = () => {
-  return (
+	return (
 		<>
 			<div
 				className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
@@ -49,7 +49,7 @@ const SectionHeader = () => {
 				</Container>
 			</div>
 		</>
-  );
+	);
 };
 
 export default SectionHeader;

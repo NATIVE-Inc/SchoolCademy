@@ -15,15 +15,13 @@ import {
   CardFooter,
 } from "reactstrap";
 // core components
-import SectionHeader from "components/Headers/SectionHeader.js";
-import SectionTimeline from "./SectionTimeline";
-import SectionSidebar from "../../components/Sidebar/SectionSidebar";
-import HeaderTopic from "components/Headers/HeaderTopic";
+import SectionSidebar from "../components/Sidebar/SectionSidebar";
+import SectionHeader from "components/Headers/SectionHeader";
 
-const Profile = () => {
+const Study = () => {
   return (
 		<>
-			<HeaderTopic />
+			<SectionHeader />
 			{/* Page content */}
 			<Container className="mt--7" fluid>
 				<Row>
@@ -219,4 +217,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Study;

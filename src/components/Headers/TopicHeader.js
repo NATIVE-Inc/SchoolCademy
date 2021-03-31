@@ -1,9 +1,9 @@
 import React from 'react';
 
 // reactstrap components
-import { Card, CardBody, CardTitle, Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
-const HeaderTopic = () => {
+const TopicHeader = () => {
 	return (
 		<>
 			<div className="header bg-gradient-info pb-8 pt-5 pt-md-8">
@@ -23,4 +23,4 @@ const HeaderTopic = () => {
 	);
 };
 
-export default HeaderTopic;
+export default TopicHeader;
