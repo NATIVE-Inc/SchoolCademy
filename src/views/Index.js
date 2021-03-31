@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // reactstrap components
 import {  Card, CardBody, CardImg, CardText, CardTitle, Container, Row, Col } from 'reactstrap';
 
@@ -19,7 +20,11 @@ const Index = (props) => {
 				<h1>Subjects</h1>
 				<Row className="mt-1 subject-list">
 					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default">
+						<Card
+							className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default"
+							to="/admin/topics"
+							tag={Link}
+						>
 							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
 							<CardBody>
 								<CardTitle>Card title</CardTitle>
@@ -34,7 +39,7 @@ const Index = (props) => {
 						</Card>
 					</Col>
 					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default">
+						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default" to="/admin/topics" tag={Link}>
 							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
 							<CardBody>
 								<CardTitle>Card title</CardTitle>
@@ -49,7 +54,7 @@ const Index = (props) => {
 						</Card>
 					</Col>
 					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default">
+						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default" to="/admin/topics" tag={Link}>
 							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
 							<CardBody>
 								<CardTitle>Card title</CardTitle>
@@ -64,7 +69,7 @@ const Index = (props) => {
 						</Card>
 					</Col>
 					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default">
+						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default" to="/admin/topics" tag={Link}>
 							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
 							<CardBody>
 								<CardTitle>Card title</CardTitle>
@@ -79,7 +84,7 @@ const Index = (props) => {
 						</Card>
 					</Col>
 					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default">
+						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default" to="/admin/topics" tag={Link}>
 							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
 							<CardBody>
 								<CardTitle>Card title</CardTitle>
@@ -108,7 +113,7 @@ const Index = (props) => {
 						</Card>
 					</Col>
 					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 bg-gradient-default">
+						<Card className="card-stats mb-4 mb-xl-0 bg-gradient-default" to="/admin/topics" tag={Link}>
 							<CardBody>
 								<Row>
 									<div className="col">
@@ -136,7 +141,6 @@ const Index = (props) => {
 						</Card>
 					</Col>
 				</Row>
-				
 			</Container>
 		</>
 	);

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 // reactstrap components
 import { Card, CardBody, CardTitle, Container, Row, Col, Progress } from 'reactstrap';
@@ -14,7 +15,11 @@ const Sections = () => {
 			<Container className="mt--7" fluid>
 				<Row className="justify-content-center">
 					<Col md={10}>
-						<Card className="card-stats mb-4 mb-xl-0">
+					  <Card
+						  className="card-stats mb-4 mb-xl-0"
+						  to="/admin/study"
+						  tag={Link}
+					  >
 							<CardBody>
 								<Row>
 									<div className="col-md-8">
@@ -49,7 +54,8 @@ const Sections = () => {
 
 					{/* Topic 1 */}
 					<Col md={7}>
-						<Card className="card-stats mb-4 mb-xl-0">
+						<Card className="card-stats mb-4 mb-xl-0" to="/admin/study"
+							tag={Link}>
 							<CardBody>
 								<Row>
 									<Col className="col-auto">
@@ -77,7 +83,8 @@ const Sections = () => {
 					</Col>
 					{/* Topic 2 */}
 					<Col md={7}>
-						<Card className="card-stats mb-4 mb-xl-0">
+						<Card className="card-stats mb-4 mb-xl-0" to="/admin/study"
+							tag={Link}>
 							<CardBody>
 								<Row>
 									<Col className="col-auto">
@@ -104,7 +111,8 @@ const Sections = () => {
 					</Col>
 					{/* Topic 3 */}
 					<Col md={7}>
-						<Card className="card-stats mb-4 mb-xl-0">
+						<Card className="card-stats mb-4 mb-xl-0" to="/admin/study"
+							tag={Link}>
 							<CardBody>
 								<Row>
 									<Col className="col-auto">

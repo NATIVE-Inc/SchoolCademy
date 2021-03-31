@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // reactstrap components
 import { Card, CardText, CardBody, Container, Row, Col } from 'reactstrap';
 // core components
@@ -17,9 +18,10 @@ const Topics = () => {
 						<Card
 							className="card-stats mb-4 mb-xl-0"
 							style={{
-								borderTop: "5px solid red"
-								
+								borderTop: '5px solid red',
 							}}
+							to="/admin/sections"
+							tag={Link}
 						>
 							<CardBody>
 								<CardText>
@@ -35,7 +37,7 @@ const Topics = () => {
 						</Card>
 					</Col>
 					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0">
+						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
 							<CardBody>
 								<CardText>
 									<h4>Title of card</h4>
@@ -50,7 +52,7 @@ const Topics = () => {
 						</Card>
 					</Col>
 					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0">
+						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
 							<CardBody>
 								<CardText>
 									<h4>Title of card</h4>
@@ -65,7 +67,7 @@ const Topics = () => {
 						</Card>
 					</Col>
 					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0">
+						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
 							<CardBody>
 								<CardText>
 									<h4>Title of card</h4>
@@ -80,7 +82,7 @@ const Topics = () => {
 						</Card>
 					</Col>
 					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0">
+						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
 							<CardBody>
 								<CardText>
 									<h4>Title of card</h4>
@@ -95,7 +97,7 @@ const Topics = () => {
 						</Card>
 					</Col>
 					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0">
+						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
 							<CardBody>
 								<CardText>
 									<h4>Title of card</h4>
@@ -110,7 +112,7 @@ const Topics = () => {
 						</Card>
 					</Col>
 					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0">
+						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
 							<CardBody>
 								<CardText>
 									<h4>Title of card</h4>
@@ -125,7 +127,7 @@ const Topics = () => {
 						</Card>
 					</Col>
 					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0">
+						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
 							<CardBody>
 								<CardText>
 									<h4>Title of card</h4>
@@ -140,7 +142,7 @@ const Topics = () => {
 						</Card>
 					</Col>
 					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0">
+						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
 							<CardBody>
 								<CardText>
 									<h4>Title of card</h4>
@@ -155,7 +157,7 @@ const Topics = () => {
 						</Card>
 					</Col>
 					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0">
+						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
 							<CardBody>
 								<CardText>
 									<h4>Title of card</h4>
