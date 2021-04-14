@@ -1,12 +1,32 @@
-import React from 'react';
+import React, { useReducer, useEffect } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 // reactstrap components
-import {  Card, CardBody, CardImg, CardText, CardTitle, Container, Row, Col } from 'reactstrap';
-
+import { Card, CardBody, CardImg, CardText, CardTitle, Container, Row, Col } from 'reactstrap';
 
 import Header from 'components/Headers/DashboardHeader.js';
 
+const BACKEND_API = 'http://127.0.0.1:5000/cademy/api/';
+
 const Index = (props) => {
+	// get data before component mounts
+	useEffect(() => {
+		search();
+	}, []);
+
+	const search = (value) => {
+		axios
+			.post(BACKEND_API + 'syllabus', {
+					userClass: "form3",
+			})
+			.then((res) => {
+				console.log("fetching data");
+				console.log(res.data);
+			})
+			.catch((error) => {
+				// Error
+			});
+	};
 
 	return (
 		<>
@@ -39,7 +59,11 @@ const Index = (props) => {
 						</Card>
 					</Col>
 					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default" to="/admin/topics" tag={Link}>
+						<Card
+							className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default"
+							to="/admin/topics"
+							tag={Link}
+						>
 							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
 							<CardBody>
 								<CardTitle>Card title</CardTitle>
@@ -54,7 +78,11 @@ const Index = (props) => {
 						</Card>
 					</Col>
 					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default" to="/admin/topics" tag={Link}>
+						<Card
+							className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default"
+							to="/admin/topics"
+							tag={Link}
+						>
 							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
 							<CardBody>
 								<CardTitle>Card title</CardTitle>
@@ -69,7 +97,11 @@ const Index = (props) => {
 						</Card>
 					</Col>
 					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default" to="/admin/topics" tag={Link}>
+						<Card
+							className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default"
+							to="/admin/topics"
+							tag={Link}
+						>
 							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
 							<CardBody>
 								<CardTitle>Card title</CardTitle>
@@ -84,7 +116,11 @@ const Index = (props) => {
 						</Card>
 					</Col>
 					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default" to="/admin/topics" tag={Link}>
+						<Card
+							className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default"
+							to="/admin/topics"
+							tag={Link}
+						>
 							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
 							<CardBody>
 								<CardTitle>Card title</CardTitle>
