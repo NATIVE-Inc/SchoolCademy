@@ -11,13 +11,17 @@ import "assets/css/styles.css";
 import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
 
+import Store from './reducers/Store';
+
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-      <Route path="/auth" render={(props) => <AuthLayout {...props} />} />
-      <Redirect from="/" to="/admin/index" />
-    </Switch>
-  </BrowserRouter>,
-  document.getElementById("root")
+	<Store>
+		<BrowserRouter>
+			<Switch>
+				<Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+				<Route path="/auth" render={(props) => <AuthLayout {...props} />} />
+				<Redirect from="/" to="/admin/index" />
+			</Switch>
+		</BrowserRouter>
+	</Store>,
+	document.getElementById('root')
 );

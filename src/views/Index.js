@@ -1,33 +1,62 @@
-import React, { useReducer, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Context } from '../reducers/Store';
 // reactstrap components
 import { Card, CardBody, CardImg, CardText, CardTitle, Container, Row, Col } from 'reactstrap';
-
 import Header from 'components/Headers/DashboardHeader.js';
+import Subject from './Subject';
 
 const BACKEND_API = 'http://127.0.0.1:5000/cademy/api/';
 
 const Index = (props) => {
+
+	const [state, dispatch] = useContext(Context);
+
 	// get data before component mounts
 	useEffect(() => {
-		search();
-	}, []);
-
-	const search = (value) => {
 		axios
-			.post(BACKEND_API + 'syllabus', {
-					userClass: "form3",
+			.post(BACKEND_API + 'subjects', {
+				userClass: 'form3',
 			})
 			.then((res) => {
-				console.log("fetching data");
+				// fetching data
+				const postsData = res.data;
 				console.log(res.data);
+				dispatch({ type: 'SET_POSTS', payload: res.data });
+				console.log(state.posts);
 			})
 			.catch((error) => {
 				// Error
-			});
-	};
+				dispatch({ type: 'SET_ERROR', payload: error });
+				console.log(error);
+			});  
+	}, []);
 
+	let posts = <p>Loading...</p>;
+
+	if (state.error) {
+		posts = (
+			<p>
+				Something went wrong: <span>{state.error}</span>
+			</p>
+		);
+	}
+
+	if (!state.error && state.posts) {
+		posts = state.posts.map((post) => {
+			return (
+				<Subject
+					name={post.name}
+					descr={post.description}
+					class={post.class}
+					duration={post.duration}
+					difficulty={post.difficulty}
+				/>
+			);
+		});
+	}
+ 
 	return (
 		<>
 			<Header />
@@ -39,143 +68,7 @@ const Index = (props) => {
 				</Row>
 				<h1>Subjects</h1>
 				<Row className="mt-1 subject-list">
-					<Col lg="6" xl="3">
-						<Card
-							className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default"
-							to="/admin/topics"
-							tag={Link}
-						>
-							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
-							<CardBody>
-								<CardTitle>Card title</CardTitle>
-								<CardText>
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
-								</CardText>
-								<CardText>
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col lg="6" xl="3">
-						<Card
-							className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default"
-							to="/admin/topics"
-							tag={Link}
-						>
-							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
-							<CardBody>
-								<CardTitle>Card title</CardTitle>
-								<CardText>
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
-								</CardText>
-								<CardText>
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col lg="6" xl="3">
-						<Card
-							className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default"
-							to="/admin/topics"
-							tag={Link}
-						>
-							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
-							<CardBody>
-								<CardTitle>Card title</CardTitle>
-								<CardText>
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
-								</CardText>
-								<CardText>
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col lg="6" xl="3">
-						<Card
-							className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default"
-							to="/admin/topics"
-							tag={Link}
-						>
-							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
-							<CardBody>
-								<CardTitle>Card title</CardTitle>
-								<CardText>
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
-								</CardText>
-								<CardText>
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col lg="6" xl="3">
-						<Card
-							className="card-stats mb-4 mb-xl-0 text-white bg-gradient-default"
-							to="/admin/topics"
-							tag={Link}
-						>
-							<CardImg alt="..." src={process.env.PUBLIC_URL + '/physics.jpg'} top />
-							<CardBody>
-								<CardTitle>Card title</CardTitle>
-								<CardText>
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
-								</CardText>
-								<CardText>
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 text-white bg-gradient-success">
-							<CardBody>
-								<Row>
-									<div className="col">
-										<span className="h1 font-weight-bold mb-0 text-white">Biology</span>
-									</div>
-								</Row>
-								<p className="mt-3 mb-0 text-muted text-sm d-flex justify-content-end">
-									<span className="text-nowrap text-white">Since last week</span>
-								</p>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 bg-gradient-default" to="/admin/topics" tag={Link}>
-							<CardBody>
-								<Row>
-									<div className="col">
-										<h1 className="h2 font-weight-bold mb-0 text-white">Chemistry</h1>
-									</div>
-								</Row>
-								<p className="mt-3 mb-0 text-muted text-sm d-flex justify-content-end">
-									<span className="text-nowrap text-white">Since yesterday</span>
-								</p>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col lg="6" xl="3">
-						<Card className="card-stats mb-4 mb-xl-0 bg-gradient-primary text-white">
-							<CardBody>
-								<Row>
-									<div className="col">
-										<span className="h2 font-weight-bold mb-0 text-white">Mathematics</span>
-									</div>
-								</Row>
-								<p className="mt-3 mb-0 text-muted text-sm d-flex justify-content-end">
-									<span className="text-nowrap text-white">Since last month</span>
-								</p>
-							</CardBody>
-						</Card>
-					</Col>
+					{posts}
 				</Row>
 			</Container>
 		</>
