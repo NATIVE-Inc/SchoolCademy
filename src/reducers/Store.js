@@ -4,6 +4,9 @@ import Reducer from './Reducers';
 
 const initialState = {
     posts: [],
+    subjectsList: [],
+    topicsList: [],
+    titleSubject: null,
     error: null
 };
 

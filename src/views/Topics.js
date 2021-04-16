@@ -1,11 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import { Context } from '../reducers/Store';
 // reactstrap components
-import { Card, CardText, CardBody, Container, Row, Col } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 // core components
 import SubjectHeader from 'components/Headers/SubjectHeader.js';
+import Topic from './Topic';
 
-const Topics = () => {
+const Topics = (props) => {
+	const [state] = useContext(Context);
+	const { titleSubject } = props.location.state;
+
+	// get data before component mounts
+	useEffect(() => {
+		console.log('titleSubject ---------------------------');
+		console.log(titleSubject);
+	}, []);
+
+	let topics = <p>Loading...</p>;
+
+	if (state.error) {
+		topics = (
+			<p>
+				Something went wrong: <span>{state.error}</span>
+			</p>
+		);
+	}
+
+	if (!state.error && state.topicsList) {
+		topics = state.topicsList
+			.filter((post) => post.subject === titleSubject)
+			.map((post) => {
+				return <Topic key={post.name} name={post.name} descr={post.description} />;
+			});
+	}
+
 	return (
 		<>
 			<SubjectHeader />
@@ -14,163 +42,7 @@ const Topics = () => {
 				{/* Table */}
 				<Row className="card-group ">
 					{/* Topic 1 */}
-					<Col xl="3">
-						<Card
-							className="card-stats mb-4 mb-xl-0"
-							style={{
-								borderTop: '5px solid red',
-							}}
-							to="/admin/sections"
-							tag={Link}
-						>
-							<CardBody>
-								<CardText>
-									<h4>Title of card</h4>
-									<small>
-										This card has supporting text below as a natural lead-in to additional content.
-									</small>
-									<br />
-									<br />
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
-							<CardBody>
-								<CardText>
-									<h4>Title of card</h4>
-									<small>
-										This card has supporting text below as a natural lead-in to additional content.
-									</small>
-									<br />
-									<br />
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
-							<CardBody>
-								<CardText>
-									<h4>Title of card</h4>
-									<small>
-										This card has supporting text below as a natural lead-in to additional content.
-									</small>
-									<br />
-									<br />
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
-							<CardBody>
-								<CardText>
-									<h4>Title of card</h4>
-									<small>
-										This card has supporting text below as a natural lead-in to additional content.
-									</small>
-									<br />
-									<br />
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
-							<CardBody>
-								<CardText>
-									<h4>Title of card</h4>
-									<small>
-										This card has supporting text below as a natural lead-in to additional content.
-									</small>
-									<br />
-									<br />
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
-							<CardBody>
-								<CardText>
-									<h4>Title of card</h4>
-									<small>
-										This card has supporting text below as a natural lead-in to additional content.
-									</small>
-									<br />
-									<br />
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
-							<CardBody>
-								<CardText>
-									<h4>Title of card</h4>
-									<small>
-										This card has supporting text below as a natural lead-in to additional content.
-									</small>
-									<br />
-									<br />
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
-							<CardBody>
-								<CardText>
-									<h4>Title of card</h4>
-									<small>
-										This card has supporting text below as a natural lead-in to additional content.
-									</small>
-									<br />
-									<br />
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
-							<CardBody>
-								<CardText>
-									<h4>Title of card</h4>
-									<small>
-										This card has supporting text below as a natural lead-in to additional content.
-									</small>
-									<br />
-									<br />
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col xl="3">
-						<Card className="card-stats mb-4 mb-xl-0" to="/admin/sections" tag={Link}>
-							<CardBody>
-								<CardText>
-									<h4>Title of card</h4>
-									<small>
-										This card has supporting text below as a natural lead-in to additional content.
-									</small>
-									<br />
-									<br />
-									<small className="text-muted">Last updated 3 mins ago</small>
-								</CardText>
-							</CardBody>
-						</Card>
-					</Col>
+					{topics}
 				</Row>
 			</Container>
 		</>

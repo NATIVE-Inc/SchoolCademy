@@ -1,9 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import { Context } from '../reducers/Store';
 // reactstrap components
-import { Card, CardBody, CardImg, CardText, CardTitle, Container, Row, Col } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 import Header from 'components/Headers/DashboardHeader.js';
 import Subject from './Subject';
 
@@ -15,23 +14,49 @@ const Index = (props) => {
 
 	// get data before component mounts
 	useEffect(() => {
+
+		getSubjects();
+		getTopics();
+		
+		console.log(state.topicsList);
+	
+	}, []);
+
+
+	const getSubjects = () => {
+		// fetching subjects list 
 		axios
 			.post(BACKEND_API + 'subjects', {
 				userClass: 'form3',
 			})
 			.then((res) => {
 				// fetching data
-				const postsData = res.data;
-				console.log(res.data);
-				dispatch({ type: 'SET_POSTS', payload: res.data });
-				console.log(state.posts);
+				dispatch({ type: 'SET_SUBJECTS', payload: res.data });
 			})
 			.catch((error) => {
 				// Error
 				dispatch({ type: 'SET_ERROR', payload: error });
 				console.log(error);
-			});  
-	}, []);
+			});
+	}
+
+	const getTopics = () => {
+		// fetching topics list 
+		axios
+			.post(BACKEND_API + 'topics', {
+				userClass: 'form3',
+			})
+			.then((res) => {
+				// fetching data
+				dispatch({ type: 'SET_TOPICS', payload: res.data });
+			})
+			.catch((error) => {
+				// Error
+				dispatch({ type: 'SET_ERROR', payload: error });
+				console.log(error);
+			});
+		
+	}
 
 	let posts = <p>Loading...</p>;
 
@@ -43,10 +68,11 @@ const Index = (props) => {
 		);
 	}
 
-	if (!state.error && state.posts) {
-		posts = state.posts.map((post) => {
+	if (!state.error && state.subjectsList) {
+		posts = state.subjectsList.map((post) => {
 			return (
 				<Subject
+					key={post.name}
 					name={post.name}
 					descr={post.description}
 					class={post.class}

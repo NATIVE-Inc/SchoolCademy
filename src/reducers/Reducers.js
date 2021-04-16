@@ -1,14 +1,14 @@
 const Reducer = (state, action) => {
 	switch (action.type) {
-		case 'SET_POSTS':
+		case 'SET_SUBJECTS':
 			return {
 				...state,
-				posts: action.payload,
+				subjectsList: action.payload,
 			};
-		case 'ADD_POST':
+		case 'SET_TOPICS':
 			return {
 				...state,
-				posts: state.posts.concat(action.payload),
+				topicsList: action.payload,
 			};
 		case 'REMOVE_POST':
 			return {
