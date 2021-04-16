@@ -7,6 +7,7 @@ const initialState = {
     subjectsList: [],
     topicsList: [],
     titleSubject: null,
+    titleTopic: null,
     error: null
 };
 

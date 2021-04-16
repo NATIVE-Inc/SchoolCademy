@@ -12,7 +12,12 @@ const Topic = (props) => {
 					style={{
 						borderTop: '5px solid red',
 					}}
-					to="/admin/sections"
+					to={{
+						pathname: '/admin/sections',
+						state: {
+							titleTopic: props.name,
+						},
+					}}
 					tag={Link}
 				>
 					<CardBody>

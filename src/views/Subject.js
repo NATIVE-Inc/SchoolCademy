@@ -12,7 +12,7 @@ const Subject = (props) => {
 					to={{
 						pathname: '/admin/topics',
 						state: {
-							titleSubject: "mathematics",
+							titleSubject: props.name,
 						},
 					}}
 					tag={Link}

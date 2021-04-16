@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Context } from '../reducers/Store';
 // reactstrap components
 import { Container, Row } from 'reactstrap';
@@ -9,12 +9,6 @@ import Topic from './Topic';
 const Topics = (props) => {
 	const [state] = useContext(Context);
 	const { titleSubject } = props.location.state;
-
-	// get data before component mounts
-	useEffect(() => {
-		console.log('titleSubject ---------------------------');
-		console.log(titleSubject);
-	}, []);
 
 	let topics = <p>Loading...</p>;
 
