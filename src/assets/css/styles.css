@@ -39,3 +39,14 @@
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
+
+
+.subject-list > div > a > .card-body {
+    padding: 1rem 1.5rem;
+    height: 20em !important;
+}
+
+.subject-list > .card-img, .card-img-top {
+    height: 10em !important;
+    object-fit: cover;
+}

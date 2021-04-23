@@ -72,6 +72,7 @@ const Index = (props) => {
 		posts = state.subjectsList.map((post) => {
 			return (
 				<Subject
+					className="subjects"
 					key={post.name}
 					name={post.name}
 					descr={post.description}
