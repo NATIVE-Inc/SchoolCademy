@@ -10,11 +10,11 @@ import "assets/css/styles.css";
 
 import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
+import { RecoilRoot, atom, selector, useRecoilState, useRecoilValue } from 'recoil';
 
-import Store from './reducers/Store';
 
 ReactDOM.render(
-	<Store>
+	<RecoilRoot>
 		<BrowserRouter>
 			<Switch>
 				<Route path="/admin" render={(props) => <AdminLayout {...props} />} />
@@ -22,6 +22,6 @@ ReactDOM.render(
 				<Redirect from="/" to="/admin/index" />
 			</Switch>
 		</BrowserRouter>
-	</Store>,
+	</RecoilRoot>,
 	document.getElementById('root')
 );

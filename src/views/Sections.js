@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { Context } from '../reducers/Store';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 // reactstrap components

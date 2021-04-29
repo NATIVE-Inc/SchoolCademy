@@ -41,9 +41,12 @@
 }
 
 
-.subject-list > div > a > .card-body {
-    padding: 1rem 1.5rem;
-    height: 20em !important;
+.subjectsDescr {
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 6; /* number of lines to show */
+   -webkit-box-orient: vertical;
 }
 
 .subject-list > .card-img, .card-img-top {

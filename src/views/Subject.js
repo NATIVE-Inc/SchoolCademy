@@ -19,8 +19,8 @@ const Subject = (props) => {
 				>
 					<CardImg alt="..." src={process.env.PUBLIC_URL + '/' + props.name + '.jpg'} top />
 					<CardBody>
-						<CardTitle>{props.name}</CardTitle>
-						<CardText>{props.descr}</CardText>
+						<CardTitle>{props.name.toUpperCase()}</CardTitle>
+						<CardText className="subjectsDescr">{props.descr}</CardText>
 						<CardText>
 							<small className="text-muted">{props.duration}</small>
 						</CardText>

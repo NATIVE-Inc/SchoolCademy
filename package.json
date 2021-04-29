@@ -64,7 +64,8 @@
     "react-trivial-timeline": "^1.2.2",
     "react-vertical-timeline": "^0.2.0",
     "react-vertical-timeline-component": "^3.3.3",
-    "reactstrap": "8.9.0"
+    "reactstrap": "8.9.0",
+    "recoil": "^0.2.0"
   },
   "devDependencies": {
     "gulp": "4.0.2",

@@ -1,43 +1,49 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
-import { Context } from '../reducers/Store';
 // reactstrap components
 import { Container, Row } from 'reactstrap';
 import Header from 'components/Headers/DashboardHeader.js';
 import Subject from './Subject';
 
+// recoil state 
+import { useRecoilState } from 'recoil';
+import { subjectsState, errorsState } from '../states';
+
 const BACKEND_API = 'http://127.0.0.1:5000/cademy/api/';
 
 const Index = (props) => {
 
-	const [state, dispatch] = useContext(Context);
+	const [subjects, setSubjects] = useRecoilState(subjectsState);
+	const [error, setError] = useRecoilState(errorsState);
+
+	
+	let posts = <p>Loading...</p>;
 
 	// get data before component mounts
 	useEffect(() => {
 
 		getSubjects();
-		getTopics();
+		// getTopics();
 		
-		console.log(state.topicsList);
 	
 	}, []);
 
 
 	const getSubjects = () => {
-		// fetching subjects list 
 		axios
 			.post(BACKEND_API + 'subjects', {
 				userClass: 'form3',
 			})
 			.then((res) => {
 				// fetching data
-				dispatch({ type: 'SET_SUBJECTS', payload: res.data });
+				setSubjects(res.data)
 			})
 			.catch((error) => {
 				// Error
-				dispatch({ type: 'SET_ERROR', payload: error });
+				setError(error);
 				console.log(error);
 			});
+		
 	}
 
 	const getTopics = () => {
@@ -48,33 +54,32 @@ const Index = (props) => {
 			})
 			.then((res) => {
 				// fetching data
-				dispatch({ type: 'SET_TOPICS', payload: res.data });
+				
 			})
 			.catch((error) => {
 				// Error
-				dispatch({ type: 'SET_ERROR', payload: error });
+
 				console.log(error);
 			});
 		
 	}
+	
 
-	let posts = <p>Loading...</p>;
-
-	if (state.error) {
+	if (error) {
 		posts = (
 			<p>
-				Something went wrong: <span>{state.error}</span>
+				Something went wrong: <span>{error}</span>
 			</p>
 		);
 	}
 
-	if (!state.error && state.subjectsList) {
-		posts = state.subjectsList.map((post) => {
+	if (!error && subjects) {
+		posts = subjects.map((post, id) => {
 			return (
 				<Subject
 					className="subjects"
-					key={post.name}
-					name={post.name}
+					key={id}
+					name={post.title}
 					descr={post.description}
 					class={post.class}
 					duration={post.duration}
@@ -82,7 +87,7 @@ const Index = (props) => {
 				/>
 			);
 		});
-	}
+	} 
  
 	return (
 		<>
