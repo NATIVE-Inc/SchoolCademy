@@ -13,6 +13,7 @@ const Subject = (props) => {
 						pathname: '/admin/topics',
 						state: {
 							titleSubject: props.name,
+							topics: props.topics,
 						},
 					}}
 					tag={Link}
@@ -20,7 +21,7 @@ const Subject = (props) => {
 					<CardImg alt="..." src={process.env.PUBLIC_URL + '/' + props.name + '.jpg'} top />
 					<CardBody>
 						<CardTitle>{props.name.toUpperCase()}</CardTitle>
-						<CardText className="subjectsDescr">{props.descr}</CardText>
+						<CardText className="shortDescr">{props.descr}</CardText>
 						<CardText>
 							<small className="text-muted">{props.duration}</small>
 						</CardText>

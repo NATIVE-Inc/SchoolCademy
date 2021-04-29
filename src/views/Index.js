@@ -84,6 +84,7 @@ const Index = (props) => {
 					class={post.class}
 					duration={post.duration}
 					difficulty={post.difficulty}
+					topics={post.topics}
 				/>
 			);
 		});

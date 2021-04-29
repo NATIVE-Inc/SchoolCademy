@@ -10,7 +10,7 @@ import "assets/css/styles.css";
 
 import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
-import { RecoilRoot, atom, selector, useRecoilState, useRecoilValue } from 'recoil';
+import { RecoilRoot} from 'recoil';
 
 
 ReactDOM.render(

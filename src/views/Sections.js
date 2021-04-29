@@ -4,29 +4,35 @@ import { Link } from 'react-router-dom';
 // reactstrap components
 import { Card, CardBody, CardTitle, Container, Row, Col, Progress } from 'reactstrap';
 
+// recoil state
+import { useRecoilState } from 'recoil';
+import { topicsState, errorsState } from '../states';
+
 // core components
 import TopicHeader from 'components/Headers/TopicHeader';
+import Section from './Section';
 
 const Sections = (props) => {
 	
-	const [state] = useContext(Context);
-	const { titleTopic } = props.location.state;
+	const titleTopic = props.location.state.titleTopic;
+	const [topics, setTopics] = useRecoilState(topicsState);
+	const [error, setError] = useRecoilState(errorsState);
 
 	let topic = <p>Loading...</p>;
 
-	if (state.error) {
+	if (error) {
 		topic = (
 			<p>
-				Something went wrong: <span>{state.error}</span>
+				Something went wrong: <span>{error}</span>
 			</p>
 		);
 	}
 
-	if (!state.error) {
-		topic = state.topicsList.find((element) => {
-			return element.name === titleTopic;
+	if (!error) {
+		topic = topics.find((element) => {
+			return element.title === titleTopic;
 		});
-		console.log(topic);
+		console.log(topic.sections);
 	}
 
 	return (
@@ -43,7 +49,7 @@ const Sections = (props) => {
 										<CardTitle tag="h6" className="text-uppercase text-muted mb-0">
 											Grade Level: Form 5
 										</CardTitle>
-										<h1>{topic.name}</h1>
+										<h1>{topic.title}</h1>
 										<p>
 											<small>
 												{topic.description}
@@ -65,45 +71,14 @@ const Sections = (props) => {
 						</Card>
 					</Col>
 
-					{topic.sections.map((post) => {
-						return (
-							<Col md={7}>
-								<Card className="card-stats mb-4 mb-xl-0" to="/admin/study" tag={Link}>
-									<CardBody>
-										<Row>
-											<Col className="col-auto">
-												<img
-													alt="..."
-													src={process.env.PUBLIC_URL + '/physics.jpg'}
-													width="200"
-												/>
-											</Col>
-											<div className="col">
-												<CardTitle tag="h6" className="text-uppercase text-muted mb-0">
-													Topic 1
-												</CardTitle>
-												<h4>{post.subTitle}</h4>
-												<small>
-													Analyze data using tools, technologies, and/or models (e.g.,
-													computational, mathematical) in order to make valid and reliable
-													scientific claims or determine an optimal design solution.
-												</small>
-												<p className="mt-3 mb-0 text-muted text-sm">
-													<span>60%</span>
-
-													<Progress
-														style={{ width: '40%' }}
-														max="100"
-														value="60"
-														color="primary"
-													/>
-												</p>
-											</div>
-										</Row>
-									</CardBody>
-								</Card>
-							</Col>
-						);
+					{topic.sections.map((post, id) => {
+						return <Section
+							key={id}
+							name={post.title}
+							descr={post.description}
+							subject="physics"
+							
+							/>;
 					})}
 				</Row>
 			</Container>
