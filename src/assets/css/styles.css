@@ -53,3 +53,16 @@
     height: 10em !important;
     object-fit: cover;
 }
+
+.studyNavbar {
+    position: unset !important;
+    background: #2d335c !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.timeline {
+    padding: 10px;
+}

@@ -48,7 +48,7 @@ const Topics = (props) => {
 
 	if (!error && topics) {
 		topicsDisplay = topics.map((post, id) => {
-			return <Topic key={id} name={post.title} descr={post.description} />;
+			return <Topic key={id} name={post.title} descr={post.description} sections={post.sections} />;
 		});
 	}
 

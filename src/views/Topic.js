@@ -16,7 +16,8 @@ const Topic = (props) => {
 						pathname: '/admin/sections',
 						state: {
 							titleTopic: props.name,
-							titleSubject: props.name,
+							descrTopic: props.descr,
+							sections: props.sections,
 						},
 					}}
 					tag={Link}

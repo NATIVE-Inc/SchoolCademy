@@ -14,25 +14,24 @@ import Section from './Section';
 
 const Sections = (props) => {
 	
-	const titleTopic = props.location.state.titleTopic;
-	const [topics, setTopics] = useRecoilState(topicsState);
-	const [error, setError] = useRecoilState(errorsState);
+	const sections = props.location.state.sections;
+	const topicName = props.location.state.titleTopic;
+	const topicDescr = props.location.state.descrTopic;
 
 	let topic = <p>Loading...</p>;
 
-	if (error) {
+	if (!sections) {
 		topic = (
 			<p>
-				Something went wrong: <span>{error}</span>
+				Something went wrong: <span>error</span>
 			</p>
 		);
 	}
 
-	if (!error) {
-		topic = topics.find((element) => {
-			return element.title === titleTopic;
+	else {
+		topic = sections.map((post, id) => {
+			return <Section key={id} name={post.title} descr={post.description} parts={post.parts} subject="physics"/>;
 		});
-		console.log(topic.sections);
 	}
 
 	return (
@@ -49,10 +48,10 @@ const Sections = (props) => {
 										<CardTitle tag="h6" className="text-uppercase text-muted mb-0">
 											Grade Level: Form 5
 										</CardTitle>
-										<h1>{topic.title}</h1>
+										<h1>{topicName}</h1>
 										<p>
 											<small>
-												{topic.description}
+												{topicDescr}
 											</small>
 										</p>
 									</div>
@@ -62,24 +61,11 @@ const Sections = (props) => {
 										</div>
 									</Col>
 								</Row>
-								<p className="mt-3 mb-0 text-muted text-sm">
-									<span className="text-success mr-2">
-										{topic.subject}
-									</span>
-								</p>
 							</CardBody>
 						</Card>
 					</Col>
 
-					{topic.sections.map((post, id) => {
-						return <Section
-							key={id}
-							name={post.title}
-							descr={post.description}
-							subject="physics"
-							
-							/>;
-					})}
+					{topic}
 				</Row>
 			</Container>
 		</>
