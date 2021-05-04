@@ -3,7 +3,7 @@ import React from 'react';
 // reactstrap components
 import { Card, CardBody, Container, Row, Col } from 'reactstrap';
 
-const SubjectHeader = () => {
+const SubjectHeader = (props) => {
 	return (
 		<>
 			<div
@@ -21,10 +21,9 @@ const SubjectHeader = () => {
 				<Container className="d-flex align-items-center" fluid>
 					<Row>
 						<Col lg="7" md="10">
-							<h1 className="display-2 text-white">Physics</h1>
+							<h1 className="display-2 text-white">{props.name.toUpperCase()}</h1>
 							<p className="text-white mt-0 mb-5">
-								This is your profile page. You can see the progress you've made with your work and
-								manage your projects or assigned tasks
+								{props.descr}
 							</p>
 						</Col>
 					</Row>

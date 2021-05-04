@@ -22,9 +22,13 @@ const Index = (props) => {
 	// get data before component mounts
 	useEffect(() => {
 
-		getSubjects();
-		// getTopics();
-		
+		if (localStorage.getItem('localSubjects') === "null") {
+			getSubjects();	
+		}
+		else {
+			setSubjects(JSON.parse(localStorage.getItem('localSubjects')));
+		}
+
 	
 	}, []);
 
@@ -36,7 +40,8 @@ const Index = (props) => {
 			})
 			.then((res) => {
 				// fetching data
-				setSubjects(res.data)
+				setSubjects(res.data);
+				localStorage.setItem('localSubjects', JSON.stringify(res.data));
 			})
 			.catch((error) => {
 				// Error

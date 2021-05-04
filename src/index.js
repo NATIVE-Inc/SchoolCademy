@@ -13,6 +13,10 @@ import AuthLayout from "layouts/Auth.js";
 import { RecoilRoot} from 'recoil';
 
 
+localStorage.setItem('localSubjects', 'null');
+localStorage.setItem('localTopics', 'null');
+localStorage.setItem('currentSubject', 'null');
+
 ReactDOM.render(
 	<RecoilRoot>
 		<BrowserRouter>

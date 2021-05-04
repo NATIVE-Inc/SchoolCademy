@@ -19,23 +19,33 @@ const Topics = (props) => {
 
 	let topicsDisplay = <p>Loading...</p>;
 	let topicsArray = props.location.state.topics;
+	let subject = props.location.state.subject;
+	let descr = props.location.state.descr;
 
 	// get data before component mounts
 	useEffect(() => {
-		// fetching topics list
-		axios
-			.post(BACKEND_API + 'topics', {
-				topicsArray: topicsArray,
-			})
-			.then((res) => {
-				// fetching data
-				setTopics(res.data);
-			})
-			.catch((error) => {
-				// Error
-				setError(error);
-				console.log(error);
-			});
+		if (localStorage.getItem('localTopics') === 'null' || localStorage.getItem('currentSubject') !== subject) {  // fetches data if there no data or if subject is different 
+			// fetching topics list
+			axios
+				.post(BACKEND_API + 'topics', {
+					topicsArray: topicsArray,
+				})
+				.then((res) => {
+					// fetching data
+					setTopics(res.data);
+					localStorage.setItem('localTopics', JSON.stringify(res.data));
+					localStorage.setItem('currentSubject', subject); 
+				})
+				.catch((error) => {
+					// Error
+					setError(error);
+					console.log(error);
+				});
+		} else {
+			setTopics(JSON.parse(localStorage.getItem('localTopics')));
+		}
+
+		
 	}, []);
 
 	if (error) {
@@ -54,7 +64,10 @@ const Topics = (props) => {
 
 	return (
 		<>
-			<SubjectHeader />
+			<SubjectHeader
+				name={subject}
+				descr={descr}
+			/>
 			{/* Page content */}
 			<Container fluid className="col-md-10">
 				{/* Table */}

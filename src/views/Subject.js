@@ -14,6 +14,8 @@ const Subject = (props) => {
 						state: {
 							titleSubject: props.name,
 							topics: props.topics,
+							subject: props.name,
+							descr: props.descr, 
 						},
 					}}
 					tag={Link}
