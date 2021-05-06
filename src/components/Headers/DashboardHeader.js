@@ -10,23 +10,26 @@ const Header = () => {
 				className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
 				style={{
 					minHeight: '600px',
-					backgroundImage: 'url(' + require('../../assets/img/theme/profile-cover.jpg').default + ')',
+					backgroundImage: 'url(' + require('../../assets/img/theme/classroom.jpg').default + ')',
 					backgroundSize: 'cover',
 					backgroundPosition: 'center top',
 				}}
 			>
 				{/* Mask */}
-				<span className="mask bg-gradient-default opacity-8" />
+				<span className="mask bg-gradient-default2  opacity-8" />
 				{/* Header container */}
 				<Container className="d-flex align-items-center" fluid>
 					<div className="header-body col-xl-12">
 						{/* Card stats */}
 						<Row className="justify-content-md-center d-flex">
 							<Col xs="8">
-								<h1 className="display-1 text-white header-title">Think Forward</h1>
+								<h1 className="display-1 text-white header-title">
+									Innover l'Education <br />
+									en Afrique
+								</h1>
 								<p className="text-white header-subtitle">
-									Build skills for today, tomorrow, and beyond. <br />
-									Education to future-proof your career
+									Jouer notre rôle dans la transformation de l'éducation en Afrique <br /> préparer
+									les enseignants et les étudiants aux opportunités et aux défis du 21e siècle
 								</p>
 							</Col>
 						</Row>

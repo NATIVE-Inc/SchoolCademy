@@ -3,7 +3,7 @@ import axios from 'axios';
 // reactstrap components
 import { Container, Row } from 'reactstrap';
 import Header from 'components/Headers/DashboardHeader.js';
-import Subject from './Subject';
+import Subject from '../components/component/Subject';
 
 // recoil state 
 import { useRecoilState } from 'recoil';

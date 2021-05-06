@@ -10,7 +10,7 @@ import { topicsState, errorsState } from '../states';
 
 // core components
 import TopicHeader from 'components/Headers/TopicHeader';
-import Section from './Section';
+import Section from '../components/component/Section';
 
 const Sections = (props) => {
 	

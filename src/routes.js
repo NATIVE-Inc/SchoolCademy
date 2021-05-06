@@ -7,7 +7,7 @@ import Topics from "views/Topics.js";
 var routes = [
   {
     path: "/index",
-    name: "Lectures",
+    name: "Home",
     icon: "ni ni-tv-2 text-primary",
     component: Index,
     layout: "/admin",

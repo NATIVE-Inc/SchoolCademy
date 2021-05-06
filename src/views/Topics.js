@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Container, Row } from 'reactstrap';
 // core components
 import SubjectHeader from 'components/Headers/SubjectHeader.js';
-import Topic from './Topic';
+import Topic from '../components/component/Topic';
 
 // recoil state
 import { useRecoilState } from 'recoil';
