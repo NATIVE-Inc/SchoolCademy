@@ -108,14 +108,6 @@ const Index = (props) => {
 		<>
 			<Header />
 			{/* Page content */}
-			<Container fluid>
-				<Row className="mt-7 block-display">
-					<h1>World-Class Programs Built With Industry Experts</h1>
-					<p>Complete portfolio-ready projects and advance your career.</p>
-				</Row>
-				<h1>Subjects</h1>
-				<Row className="mt-1 subject-list">{posts}</Row>
-			</Container>
 			<section className="section section-lg">
 				<Container>
 					<Row className="row-grid align-items-center">
@@ -123,7 +115,7 @@ const Index = (props) => {
 							<img
 								alt="..."
 								className="img-fluid floating"
-								src={process.env.PUBLIC_URL + '/profile1.jpg'}
+								src={process.env.PUBLIC_URL + '/learn.jpg'}
 							/>
 						</Col>
 						<Col className="order-md-1" md="6">
@@ -131,17 +123,56 @@ const Index = (props) => {
 								<div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
 									<i className="ni ni-settings-gear-65" />
 								</div>
-								<h3>
-									Aider les enseignants africains à utiliser l'apprentissage actif et les TIC en
-									classe
-								</h3>
+								<h3>Bibliothèque de leçons interactives</h3>
 								<p>
-									Des changements majeurs sont nécessaires dans les écoles africaines pour améliorer
-									les résultats et faire face à l'augmentation rapide du nombre d'élèves. Les
-									approches centrées sur l'apprenant, l'amélioration de la connectivité Internet et le
-									récent cadre de compétences TIC de l'UNESCO offrent des opportunités pour ce faire.
+									les leçons comprennent du texte, des vidéos, des quiz et des pdf, le tout dans le
+									même document de leçon, ce qui le rend hautement interactif et facile à utiliser
+									pour les étudiants.
 								</p>
 							</div>
+						</Col>
+					</Row>
+				</Container>
+			</section>
+			<section className="section section-lg">
+				<Container>
+					<Row className="row-grid align-items-center pb-100 pt-100">
+						<Col className="order-md-1" md="6">
+							<img
+								alt="..."
+								className="img-fluid floating"
+								src={process.env.PUBLIC_URL + '/exams.jpg'}
+							/>
+						</Col>
+						<Col className="order-md-2" md="6">
+							<div className="pr-md-5">
+								<div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
+									<i className="ni ni-settings-gear-65" />
+								</div>
+								<h3>Bibliothèque de questions standard</h3>
+								<p>
+									Application ELearning qui a une très grande banque de milliers de questions dans sa
+									bibliothèque. Ceux-ci sont classés par sujets et sont accompagnés d'explications
+									vidéo et textuelles
+								</p>
+							</div>
+						</Col>
+					</Row>
+				</Container>
+			</section>
+			<section className="section section-lg bg-gradient-default">
+				<Container className="pt-lg pt-100 pb-100">
+					<Row className="text-center justify-content-center">
+						<Col lg="10">
+							<h2 className="display-3 text-white">À PROPOS DE NOUS</h2>
+							<p className="lead text-white">
+								Conçu pour les écoles africaines avec une gamme d'outils pour aider les étudiants à
+								comprendre les sujets et les sujets et à mieux réussir aux concours et aux examens. Pour
+								les enseignants, il fournit une bibliothèque de leçons et d’éléments d’évaluation
+								faciles à utiliser qui les aident à identifier les zones de carence des élèves afin
+								qu’ils puissent améliorer tous les élèves de leur classe - les faibles et les forts
+								ensemble
+							</p>
 						</Col>
 					</Row>
 				</Container>

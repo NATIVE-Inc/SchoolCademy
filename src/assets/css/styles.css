@@ -82,3 +82,10 @@
 87deg
 , #172b4d8c 0, #1a174da6 100%) !important;
 }
+
+.vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+    background: transparent;
+}
+.vertical-timeline-element-content{
+    margin-left: 47px !important;
+}

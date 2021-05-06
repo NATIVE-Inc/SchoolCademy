@@ -10,7 +10,7 @@ const Footer = () => {
 		<footer className="footer bg-gradient-default">
       <Row>
         <Col xl={4}>
-          This is the company
+          CADEMY
         </Col>
 				<Col xl={3}>
 					<Nav className="nav-footer d-block">

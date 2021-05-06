@@ -50,46 +50,44 @@ const Study = (props) => {
 		<>
 			<StudyNavbar />
 			{/* Page content */}
-			<div>
-				<Row>
-					<Col className="order-xl-2" xl="9">
-						<Card className="bg-secondary shadow">
-							<CardHeader className="bg-white border-0">
-								<Row className="align-items-center">
-									<Col xs="8">
-										<h3 className="mb-0">{title}</h3>
-									</Col>
-								</Row>
-							</CardHeader>
-							<CardBody>
-								<div>
-									<h4>{part.title}</h4>
-									<p>{part.content}</p>
-								</div>
-							</CardBody>
-							<CardFooter>
-								<Row>
-									<Col className="text-left" xs="6">
-										<Button color="primary" onClick={handleClickBack} size="md">
-											Prev
-										</Button>
-									</Col>
-									<Col className="text-right" xs="6">
-										<Button color="primary" size="md" onClick={handleClick}>
-											Next
-										</Button>
-									</Col>
-								</Row>
-							</CardFooter>
-						</Card>
-					</Col>
-					<Col className="order-xl-1 mb-5 mb-xl-0 no-padding" xl="3">
-						<Card className="timeline shadow">
-							<SectionSidebar parts={parts} />
-						</Card>
-					</Col>
-				</Row>
-			</div>
+			<Row>
+				<Col className="order-xl-1 mb-5 mb-xl-0 no-padding" xl="3">
+					<div className="timeline">
+						<SectionSidebar parts={parts} />
+					</div>
+				</Col>
+				<Col className="order-xl-2 no-padding" xl="9">
+					<Card className="bg-secondary shadow">
+						<CardHeader className="bg-white border-0">
+							<Row className="align-items-center">
+								<Col xs="8">
+									<h3 className="mb-0">{title}</h3>
+								</Col>
+							</Row>
+						</CardHeader>
+						<CardBody>
+							<div>
+								<h4>{part.title}</h4>
+								<p>{part.content}</p>
+							</div>
+						</CardBody>
+						<CardFooter>
+							<Row>
+								<Col className="text-left" xs="6">
+									<Button color="primary" onClick={handleClickBack} size="md">
+										Prev
+									</Button>
+								</Col>
+								<Col className="text-right" xs="6">
+									<Button color="primary" size="md" onClick={handleClick}>
+										Next
+									</Button>
+								</Col>
+							</Row>
+						</CardFooter>
+					</Card>
+				</Col>
+			</Row>
 		</>
 	);
 };

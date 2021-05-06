@@ -16,7 +16,7 @@ const Sidebar = (props) => {
 							key={id}
 							className="vertical-timeline-element--work"
 							contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-							iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+							iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', width: "25px", height: "25px", marginLeft: "7px", marginTop: "9px", }}
 							icon={<ArrowLeft />}
 						>
 							<h2 className="vertical-timeline-element-subtitle">{part.title}</h2>
