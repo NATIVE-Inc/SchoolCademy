@@ -1,20 +1,19 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+// import React, { useEffect } from 'react';
+// import axios from 'axios';
 // reactstrap components
 import { Container, Row } from 'reactstrap';
 import Header from 'components/Headers/DashboardHeader.js';
-import Subject from '../components/component/Subject';
+// import Subject from '../components/component/Subject';
 
 // recoil state
-import { useRecoilState } from 'recoil';
-import { subjectsState, errorsState } from '../states';
+// import { useRecoilState } from 'recoil';
+// import { subjectsState, errorsState } from '../states';
 
 // reactstrap components
 import {
 	Button,
-	Badge,
 	Card,
-	CardImg,
 	Col,
 	CardBody,
 	InputGroup,
@@ -25,9 +24,10 @@ import {
 } from 'reactstrap';
 
 
-const BACKEND_API = 'http://127.0.0.1:5000/cademy/api/';
+// const BACKEND_API = 'http://127.0.0.1:5000/cademy/api/';
 
 const Index = (props) => {
+	/* 
 	const [subjects, setSubjects] = useRecoilState(subjectsState);
 	const [error, setError] = useRecoilState(errorsState);
 
@@ -99,7 +99,7 @@ const Index = (props) => {
 			);
 		});
 	}
-
+ */
 	return (
 		<>
 			<Header />
@@ -317,7 +317,7 @@ const Index = (props) => {
 					<Row className="justify-content-center text-center mb-lg">
 						<Col lg="8">
 							<h2 className="display-3">La formidable équipe</h2>
-							<p className="lead text-muted">le but est de transformer l'accès à l'éducation.</p>
+							<p className="text-muted">le but est de transformer l'accès à l'éducation.</p>
 						</Col>
 					</Row>
 					<Row>

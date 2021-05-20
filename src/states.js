@@ -1,4 +1,4 @@
-const { atom, selector } = require("recoil");
+const { atom } = require("recoil");
 
 
 const subjectsState = atom({

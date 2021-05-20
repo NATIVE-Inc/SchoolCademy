@@ -20,19 +20,20 @@ const StudyNavbar = (props) => {
 		<>
 			<Navbar className="navbar-top navbar-dark studyNavbar" expand="md" id="navbar-main">
 				<Container fluid>
-					<Link className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" to="/">
-						{props.brandText}
+					<Link className="h1 mb-0 text-white text-uppercase d-none d-lg-inline-block" to="/">
+						{/* {props.brandText} */}
+						CADEMY
 					</Link>
 					<Nav className="align-items-center d-none d-md-flex" navbar>
 						<NavItem>
-							<NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+							<Link className="nav-link" to="/admin/classes">
 								Classes
-							</NavLink>
+							</Link>
 						</NavItem>
 						<NavItem>
-							<NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+							<Link className="nav-link" to="/admin/subjects">
 								Subjects
-							</NavLink>
+							</Link>
 						</NavItem>
 						<NavItem>
 							<NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
@@ -44,6 +45,8 @@ const StudyNavbar = (props) => {
 								About Us
 							</NavLink>
 						</NavItem>
+					</Nav>
+					<Nav className="align-items-center d-none d-md-flex" navbar>
 						<UncontrolledDropdown nav>
 							<DropdownToggle className="pr-0" nav>
 								<Media className="align-items-center">

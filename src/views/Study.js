@@ -6,17 +6,12 @@ import {
 	Card,
 	CardHeader,
 	CardBody,
-	FormGroup,
-	Form,
-	Input,
-	Container,
 	Row,
 	Col,
 	CardFooter,
 } from 'reactstrap';
 // core components
 import SectionSidebar from '../components/Sidebar/SectionSidebar';
-import StudyNavbar from 'components/Navbars/StudyNavbar';
 
 import { useRecoilState } from 'recoil';
 import { partState } from '../states';
@@ -48,7 +43,6 @@ const Study = (props) => {
 
 	return (
 		<>
-			<StudyNavbar />
 			{/* Page content */}
 			<Row>
 				<Col className="order-xl-1 mb-5 mb-xl-0 no-padding" xl="3">

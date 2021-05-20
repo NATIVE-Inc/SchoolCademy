@@ -85,7 +85,6 @@ const Subjects = (props) => {
 	}
 	return (
 		<>
-			<StudyNavbar />
 			{/* Page content */}
 			<Container fluid>
 				<Row className="mt-7 block-display">
