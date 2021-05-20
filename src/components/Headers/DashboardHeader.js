@@ -1,15 +1,15 @@
 import React from "react";
 
 // reactstrap components
-import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
+import { Card, CardBody, CardTitle, Container, Row, Col, Button } from "reactstrap";
 
 const Header = () => {
   return (
 		<>
 			<div
-				className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+				className="header align-items-center"
 				style={{
-					minHeight: '600px',
+					minHeight: '45rem',
 					backgroundImage: 'url(' + require('../../assets/img/theme/classroom.jpg').default + ')',
 					backgroundSize: 'cover',
 					backgroundPosition: 'center top',
@@ -21,15 +21,38 @@ const Header = () => {
 				<Container className="d-flex align-items-center" fluid>
 					<div className="header-body col-xl-12">
 						{/* Card stats */}
-						<Row className="justify-content-md-center d-flex">
-							<Col xs="8">
-								<h1 className="display-1 text-white header-title">
-									Innover l'Education <br />
-									en Afrique
+						<Row className="pl-lg-8 pt-lg-6 d-flex">
+							<Col lg="6">
+								<h1 className="display-2 text-white header-title">
+									Measure, improve and report on your social media impact with confidence.
 								</h1>
-								<p className="text-white header-subtitle">
-									Jouer notre rôle dans la transformation de l'éducation en Afrique <br /> préparer
-									les enseignants et les étudiants aux opportunités et aux défis du 21e siècle
+								<h3 className="text-white header-subtitle">
+									<br />
+									<br />
+									Keyhole’s social listening, influencer tracking and social media analytics products
+									help marketers improve their social media strategy, and prove their impact to
+									colleagues and clients.
+									<br />
+									<br />
+								</h3>
+								<h3 className="text-white header-subtitle">
+									Keyhole’s easy-to-use dashboard allows you to build and share reports instantly,
+									saving hundreds of hours a year.
+									<br />
+									<br />
+								</h3>
+								<Button className="btn-icon btn-3 ml-1" color="primary" type="button">
+									<span className="btn-inner--text">GET STARTED</span>
+									<span className="btn-inner--icon mr-1">
+										<i className="ni ni-bag-17" />
+									</span>
+								</Button>
+								<p className="text-white pl-2">
+									<br />
+									<span className="btn-inner--icon mr-1">
+										<i className="ni ni-bag-17" />
+									</span>
+									No Credit Card Required
 								</p>
 							</Col>
 						</Row>

@@ -1,14 +1,23 @@
 .dashboard-analytics {
     margin-top: -3%;
 }
+p {
+        font-family: quicksand,Quicksand,sans-serif !important;
+    font-weight: 500 !important;
+}
 
+hr {
+    border-top: 1px solid white !important;
+}
 .block-display {
         display: block;
         text-align: center;
 }
 
 .header-title {
-    font-weight: bold;
+    font-family: 'Tiempos Headline',Georgia,'Times New Roman',Times,serif;
+    font-weight: 700;
+    line-height: 1;
 }
 
 .subject-list > .card {

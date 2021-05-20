@@ -96,10 +96,12 @@ Topics
 
 ## Pages
 
-├── Classes (Form1, Form2, Form3)
-│   └── Lectures (Maths, Physics, Biology)
-│       └── Topics (Thermodynamics, Newtons laws, Motion)
-│           └── Sections (Section 1...)
-
+```
+├── Classes (Form1, Form2, Form3)  
+│   └── Lectures (Maths, Physics, Biology)  
+│       └── Topics (Thermodynamics, Newtons laws, Motion)  
+│           └── Sections (Section 1...)  
+│               └── Parts (Part 1...)  
+```
 
 </details>
