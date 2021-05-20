@@ -159,7 +159,7 @@ const Index = (props) => {
 					</Row>
 				</Container>
 			</section>
-			<section className="section section-lg bg-gradient-lighter">
+			<section className="section section-lg bg-gradient-lighter  pt-4 pb-4">
 				<Container>
 					<Row className="row-grid  pb-100 pt-100">
 						<Col className="order-md-2" md="6">
@@ -240,7 +240,7 @@ const Index = (props) => {
 					</Row>
 				</Container>
 			</section>
-			<section className="section section-lg bg-gradient-default">
+			<section className="section section-lg bg-gradient-default pt-4 pb-4">
 				<Container className="pt-lg pt-100 pb-100">
 					<Row className="text-center justify-content-center">
 						<Col lg="10">
@@ -258,43 +258,33 @@ const Index = (props) => {
 				</Container>
 			</section>
 
-			<section className="section section-lg bg-gradient-pink">
+			<section className="section section-lg bg-gradient-pink  pt-4 pb-4">
 				<Container className="pt-lg pt-100 pb-100">
 					<h2 className="display-3 header-title text-center justify-content-center">
 						The latest on Social Media Analytics, Influencer Marketing and Social Listening
 					</h2>
 					<Row className="pt-4">
-						<Card className="shadow shadow-lg--hover ml-2 mr-2 col">
-							<CardBody>
-								<div className="icon icon-shape bg-gradient-success rounded-circle text-white">
-									<i className="ni ni-satisfied" />
-								</div>
-								<h5 className="title text-success">Awesome Support</h5>
-								<p>
-									The Arctic Ocean freezes every winter and much of the sea-ice then thaws every
-									summer, and that process will continue whatever.
-								</p>
-								<a className="text-success" href="#pablo" onClick={(e) => e.preventDefault()}>
-									Learn more
-								</a>
-							</CardBody>
-						</Card>
-						<Card className="shadow shadow-lg--hover ml-2 mr-2  col">
-							<CardBody>
-								<div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
-									<i className="ni ni-active-40" />
-								</div>
-								<h5 className="title text-warning">Modular Components</h5>
-								<p>
-									The Arctic Ocean freezes every winter and much of the sea-ice then thaws every
-									summer, and that process will continue whatever.
-								</p>
-								<a className="text-warning" href="#pablo" onClick={(e) => e.preventDefault()}>
-									Learn more
-								</a>
-							</CardBody>
-						</Card>
-						<Card className="shadow shadow-lg--hover ml-2 mr-2  col">
+						<Col md={4}>
+							<Card className="shadow shadow-lg--hover ml-2 mr-2">
+								<CardBody>
+									<div className="icon icon-shape bg-gradient-success rounded-circle text-white">
+										<i className="ni ni-satisfied" />
+									</div>
+									<h5 className="title text-success">Awesome Support</h5>
+									<p>
+										The Arctic Ocean freezes every winter and much of the sea-ice then thaws every
+										summer, and that process will continue whatever.
+									</p>
+									<a className="text-success" href="#pablo" onClick={(e) => e.preventDefault()}>
+										Learn more
+									</a>
+								</CardBody>
+							</Card>
+						</Col>
+
+						<Col md={4}>
+
+						<Card className="shadow shadow-lg--hover ml-2 mr-2">
 							<CardBody>
 								<div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
 									<i className="ni ni-active-40" />
@@ -309,6 +299,25 @@ const Index = (props) => {
 								</a>
 							</CardBody>
 						</Card>
+						</Col>
+						<Col md={4}>
+
+						<Card className="shadow shadow-lg--hover ml-2 mr-2">
+							<CardBody>
+								<div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
+									<i className="ni ni-active-40" />
+								</div>
+								<h5 className="title text-warning">Modular Components</h5>
+								<p>
+									The Arctic Ocean freezes every winter and much of the sea-ice then thaws every
+									summer, and that process will continue whatever.
+								</p>
+								<a className="text-warning" href="#pablo" onClick={(e) => e.preventDefault()}>
+									Learn more
+								</a>
+							</CardBody>
+						</Card>
+							</Col>
 					</Row>
 				</Container>
 			</section>
@@ -493,7 +502,7 @@ const Index = (props) => {
 				</Container>
 			</section>
 			<section className="section section-lg pt-0">
-				<Container >
+				<Container>
 					<Row className="justify-content-center">
 						<Card className="bg-gradient-warning shadow-lg border-0 col-lg-8">
 							<div className="p-5">

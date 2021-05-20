@@ -1,52 +1,113 @@
-
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+// JavaScript plugin that hides or shows a component based on your scroll
+import Headroom from 'headroom.js';
 // reactstrap components
 import {
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  Navbar,
-  Nav,
-  Container,
-  Media,
-  NavItem,
-  NavLink
-} from "reactstrap";
+	Button,
+	UncontrolledCollapse,
+	DropdownMenu,
+	DropdownItem,
+	DropdownToggle,
+	UncontrolledDropdown,
+	Media,
+	NavbarBrand,
+	Navbar,
+	NavItem,
+	NavLink,
+	Nav,
+	Container,
+	Row,
+	Col,
+	UncontrolledTooltip,
+} from 'reactstrap';
 
-const AdminNavbar = (props) => {
-  return (
-		<>
-			<Navbar className="navbar-top navbar-dark studyNavbar" expand="md" id="navbar-main">
-				<Container fluid>
-					<Link className="h1 mb-0 text-white text-uppercase d-none d-lg-inline-block" to="/">
-						{/* {props.brandText} */}
-						CADEMY
-					</Link>
-					<Nav className="align-items-center d-none d-md-flex" navbar>
-						<NavItem>
-							<Link className="nav-link" to="/admin/classes">
-								Classes
-							</Link>
-						</NavItem>
-						<NavItem>
-							<Link className="nav-link" to="/admin/subjects">
-								Subjects
-							</Link>
-						</NavItem>
-						<NavItem>
-							<NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
-								How it works
-							</NavLink>
-						</NavItem>
-						<NavItem>
-							<NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
-								About Us
-							</NavLink>
-						</NavItem>
-					</Nav>
-					<Nav className="align-items-center d-none d-md-flex" navbar>
+class AdminNavbar extends React.Component {
+	componentDidMount() {
+		let headroom = new Headroom(document.getElementById('navbar-main'));
+		// initialise
+		headroom.init();
+	}
+	state = {
+		collapseClasses: '',
+		collapseOpen: false,
+	};
+
+	onExiting = () => {
+		this.setState({
+			collapseClasses: 'collapsing-out',
+		});
+	};
+
+	onExited = () => {
+		this.setState({
+			collapseClasses: '',
+		});
+	};
+	switchPage = () => {
+		this.onExiting();
+		this.onExited();
+	}
+
+	render() {
+		return (
+			<>
+				<header className="header-global">
+					<Navbar
+						className="navbar-main navbar-transparent navbar-dark headroom bg-gradient-default  "
+						expand="lg"
+						id="navbar-main"
+					>
+						<Container>
+							<NavbarBrand className="mr-lg-5 text-white" to="/" tag={Link}>
+								CADEMY
+							</NavbarBrand>
+							<button className="navbar-toggler" id="navbar_global">
+								<span className="navbar-toggler-icon" />
+							</button>
+							<UncontrolledCollapse
+								toggler="#navbar_global"
+								navbar
+								className={'justify-content-center ' + this.state.collapseClasses}
+								onExiting={this.onExiting}
+								onExited={this.onExited}
+							>
+								<div className="navbar-collapse-header text-white">
+									<Row>
+										<Col className="collapse-brand" xs="6">
+											<Link to="/">CADEMY</Link>
+										</Col>
+										<Col className="collapse-close" xs="6">
+											<button className="navbar-toggler" id="navbar_global">
+												<span />
+												<span />
+											</button>
+										</Col>
+									</Row>
+								</div>
+								<Nav className="align-items-lg-center text-white" navbar>
+									<NavItem>
+										<Link className="nav-link text-white" to="/admin/classes">
+											Classes
+										</Link>
+									</NavItem>
+									<NavItem>
+										<Link className="nav-link text-white" to="/admin/subjects">
+											Subjects
+										</Link>
+									</NavItem>
+									<NavItem>
+										<NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+											How it works
+										</NavLink>
+									</NavItem>
+									<NavItem>
+										<NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+											About Us
+										</NavLink>
+									</NavItem>
+								</Nav>
+							</UncontrolledCollapse><Nav className="align-items-center d-none d-md-flex" navbar>
 						<UncontrolledDropdown nav>
 							<DropdownToggle className="pr-0" nav>
 								<Media className="align-items-center">
@@ -89,10 +150,13 @@ const AdminNavbar = (props) => {
 							</DropdownMenu>
 						</UncontrolledDropdown>
 					</Nav>
-				</Container>
-			</Navbar>
-		</>
-  );
-};
+				
+						</Container>
+					</Navbar>
+				</header>
+			</>
+		);
+	}
+}
 
 export default AdminNavbar;

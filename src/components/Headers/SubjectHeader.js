@@ -20,8 +20,8 @@ const SubjectHeader = (props) => {
 				{/* Header container */}
 				<Container className="d-flex align-items-center" fluid>
 					<Row>
-						<Col lg="7" md="10">
-							<h1 className="display-2 text-white">{props.name.toUpperCase()}</h1>
+						<Col lg="10" md="10">
+							<h1 className="display-2 header-title text-white">{props.name.toUpperCase()}</h1>
 							<p className="text-white mt-0 mb-5">
 								{props.descr}
 							</p>

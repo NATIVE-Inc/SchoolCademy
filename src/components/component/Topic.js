@@ -23,12 +23,14 @@ const Topic = (props) => {
 					tag={Link}
 				>
 					<CardBody>
-						<CardTitle>{props.name}</CardTitle>
+						<CardTitle>
+							<h4 className="display-4 header-title">{props.name}</h4>
+						</CardTitle>
+						<CardText className="shortDescr">
+							<p className="header-title text-darker">{props.descr}</p>
+						</CardText>
 						<CardText>
-							<small className="shortDescr">{props.descr}</small>
-							<br />
-							<br />
-							<small className="text-muted">Last updated 3 mins ago</small>
+							<small className="text-gray">Little description of the class</small>
 						</CardText>
 					</CardBody>
 				</Card>

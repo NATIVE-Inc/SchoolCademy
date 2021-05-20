@@ -10,10 +10,8 @@ const TopicHeader = (props) => {
 				<Container className="d-flex align-items-center" fluid>
 					<Row>
 						<Col lg="10" md="10">
-							<h1 className="display-2 text-white">{props.name}</h1>
-							<p className="text-white mt-0 mb-5">
-							{props.descr}
-							</p>
+							<h1 className="display-2 header-title text-white">{props.name}</h1>
+							<p className="text-white mt-0 mb-5">{props.descr}</p>
 						</Col>
 					</Row>
 				</Container>
