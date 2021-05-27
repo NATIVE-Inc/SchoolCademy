@@ -15,10 +15,14 @@ const partState = atom({
 	key: 'partState',
 	default: {},
 });
+const sideNav = atom({
+	key: 'sideNav',
+	default: {},
+});
 
 const errorsState = atom({
     key: 'errorsState',
     default: '',
 })
 
-export { subjectsState, topicsState, partState, errorsState }
+export { subjectsState, topicsState, partState, sideNav, errorsState }

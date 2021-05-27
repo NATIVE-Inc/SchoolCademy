@@ -8,7 +8,7 @@ import { Card, CardBody, Col, Progress } from 'reactstrap';
 const Section = (props) => {
 		return (
 			<Card
-				className="card-stats col-md-7 mb-xl-0 no-padding"
+				className="card-stats col-md-7 col-sm-6 mb-xl-0 no-padding"
 				to={{
 					pathname: '/admin/study',
 					state: {
