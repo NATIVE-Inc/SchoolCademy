@@ -140,10 +140,14 @@ hr {
 	background: #2d335c !important;
 }
 
+
 .no-padding {
 	padding: 0 !important;
+    overflow: hidden;
 }
-
+.no-margin {
+	margin: 0 !important;
+}
 .timeline {
 	padding: 10px;
 }
@@ -159,13 +163,18 @@ hr {
 	margin-left: 47px !important;
 }
 
-/* study sidenav css  */
-
-.sideBarBtn {
-    z-index: 4;
+/* study page css  */
+.studyHeader {
+    display: block;
+    background: rgba(0, 183, 255, 0.158);
 }
-.partTitle {
-    color: white; 
-    padding: 10px 0;
-    border-top: 2px solid rgba(255, 255, 255, 0.247);
+.studyHeaderContents{
+    padding: 1em 0;
+    margin: auto !important;
+}
+.studyContent {
+    font-family: "Aspira Webfont", Helvetica, Arial, sans-serif;
+    color: rgb(34, 34, 34);
+    font-size: 1rem;
+    
 }
