@@ -161,21 +161,6 @@ hr {
 
 /* study sidenav css  */
 
-.openSidebar {
-	display: block;
-}
-
-.closeSidebar {
-	display: none;
-}
-
-.sidebar {
-    position: absolute;
-    height: inherit;
-	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-	background: #17294d;
-	z-index: 2;
-}
 .sideBarBtn {
     z-index: 4;
 }
