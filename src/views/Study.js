@@ -45,7 +45,7 @@ const Study = (props) => {
 		<>
 			{/* Page content */}
 
-			<Container className="col-lg-12 no-padding">
+			<Container className="col-12 col-lg-12 no-padding">
 				<Sidebar
 					sidebar={<SectionSidebar parts={parts} />}
 					open={sidenav}

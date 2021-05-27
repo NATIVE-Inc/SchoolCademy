@@ -3,7 +3,6 @@ import axios from 'axios';
 // reactstrap components
 import { Container, Row } from 'reactstrap';
 import Subject from '../components/component/Subject';
-import StudyNavbar from '../components/Navbars/StudyNavbar';
 
 // recoil state
 import { useRecoilState } from 'recoil';

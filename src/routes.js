@@ -5,6 +5,7 @@ import Sections from "views/Sections.js";
 import Topics from "views/Topics.js";
 import Subjects from "views/Subjects";
 import Classes from "views/Classes";
+import About from "views/About";
 
 var routes = [
   {
@@ -47,6 +48,13 @@ var routes = [
     name: "Classes",
     icon: "ni ni-single-02 text-yellow",
     component: Classes,
+    layout: "/admin",
+  },
+  {
+    path: "/about",
+    name: "About",
+    icon: "ni ni-single-02 text-yellow",
+    component: About,
     layout: "/admin",
   },
 ];
