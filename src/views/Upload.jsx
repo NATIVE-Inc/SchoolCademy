@@ -1,24 +1,15 @@
-import React from 'react';
-import { Editor } from 'react-draft-wysiwyg';
-import { EditorState, convertToRaw } from 'draft-js';
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import draftToHtml from 'draftjs-to-html';
-import htmlToDraft from 'html-to-draftjs';
+import React, { useState } from 'react';
+import CKEditor from 'ckeditor4-react';
+
 // reactstrap components
-import { Container, Row, Col, Input, FormGroup, Button } from 'reactstrap';
+import { Container, Row, Col, Input, FormGroup, Button, Modal, ModalHeader, ModalBody, ModalFooter, Form} from 'reactstrap';
 
 const Upload = (props) => {
-	state = {
-    	editorState: EditorState.createEmpty(),
-	}
-	
-	let { editorState } = EditorState.createEmpty();
+	const { buttonLabel, className } = props;
 
-	const onEditorStateChange = (editorState) => {
-		this.setState({
-			editorState,
-		});
-	};
+	const [modal, setModal] = useState(false);
+
+	const toggle = () => setModal(!modal);
 
 	return (
 		<>
@@ -32,37 +23,43 @@ const Upload = (props) => {
 					<Col md="3">
 						<Col>
 							<FormGroup>
-								<label htmlFor="exampleFormControlSelect1">Select Class</label>
-								<Input id="exampleFormControlSelect1" type="select">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
+								<label>Select Class</label>
+								<Input type="select">
+									<option selected disabled>
+										choose class
+									</option>
+									<option>Form 5</option>
+									<option>Upper Sixth</option>
+									<option>Terminale</option>
+									<option>1ere</option>
 								</Input>
 							</FormGroup>
 						</Col>
 						<Col>
 							<FormGroup>
-								<label htmlFor="exampleFormControlSelect1">Select Subject</label>
+								<label>Select Subject</label>
 								<Input id="exampleFormControlSelect1" type="select">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
+									<option selected disabled>
+										choose subject
+									</option>
+									<option>Mathematics</option>
+									<option>Physics</option>
+									<option>Chemistry</option>
+									<option>Biology</option>
 								</Input>
 							</FormGroup>
 						</Col>
 						<Col>
 							<FormGroup>
 								<label htmlFor="exampleFormControlSelect1">Select Section </label>
+
 								<Button
 									outline
 									className="btn-icon btn-2"
 									color="primary"
 									type="button"
 									size="sm"
+									onClick={toggle}
 									style={{
 										float: 'right',
 										margin: 0,
@@ -73,48 +70,54 @@ const Upload = (props) => {
 									</span>
 								</Button>
 								<Input id="exampleFormControlSelect1" type="select">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
+									<option selected disabled>
+										choose section
+									</option>
 								</Input>
-							</FormGroup>
-						</Col>
-						<Col>
-							<FormGroup>
-								<label htmlFor="exampleFormControlSelect1">Section Image</label>
-								<div className=" custom-file">
-									<input
-										className=" custom-file-input"
-										id="customFileLang"
-										lang="en"
-										type="file"
-									></input>
-									<label className=" custom-file-label" htmlFor="customFileLang">
-										Select file
-									</label>
-								</div>
 							</FormGroup>
 						</Col>
 					</Col>
 					<Col md="9">
-						<h3>Study Content</h3>
+						<h3>Title</h3>
 						<FormGroup>
 							<Input placeholder="Title" type="text"></Input>
 						</FormGroup>
-						<div>
-							<Editor
-								editorState={editorState}
-								wrapperClassName="demo-wrapper"
-								editorClassName="demo-editor"
-								onEditorStateChange={onEditorStateChange}
-							/>
-							<textarea disabled value={draftToHtml(convertToRaw(editorState.getCurrentContent()))} />
-						</div>
+						<h3>Content</h3>
+						<CKEditor />
 					</Col>
 				</Row>
 			</Container>
+			<div>
+				<Modal isOpen={modal} toggle={toggle} className={className}>
+					<ModalHeader toggle={toggle}>Add Section</ModalHeader>
+					<ModalBody>
+						<FormGroup>
+							<label>Title of Section</label>
+							<Input placeholder="Title" type="text"></Input>
+						</FormGroup>
+						<FormGroup>
+							<label>Description</label>
+							<Input rows="3" type="textarea"></Input>
+						</FormGroup>
+						<Form>
+							<div className=" custom-file">
+								<input className=" custom-file-input" id="customFileLang" lang="en" type="file"></input>
+								<label className=" custom-file-label" htmlFor="customFileLang">
+									Select file
+								</label>
+							</div>
+						</Form>
+					</ModalBody>
+					<ModalFooter>
+						<Button color="primary" onClick={toggle}>
+							Cancel
+						</Button>{' '}
+						<Button color="secondary" onClick={toggle}>
+							Submit
+						</Button>
+					</ModalFooter>
+				</Modal>
+			</div>
 		</>
 	);
 };
