@@ -101,6 +101,11 @@ class AdminNavbar extends React.Component {
 											About Us
 										</Link>
 									</NavItem>
+									<NavItem>
+										<Link className="nav-link text-white" to="/admin/upload">
+											Upload
+										</Link>
+									</NavItem>
 								</Nav>
 							</UncontrolledCollapse>
 							<Nav className="align-items-center d-none d-md-flex" navbar>

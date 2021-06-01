@@ -6,6 +6,7 @@ import Topics from "views/Topics.js";
 import Subjects from "views/Subjects";
 import Classes from "views/Classes";
 import About from "views/About";
+import Upload from "views/Upload";
 
 var routes = [
   {
@@ -55,6 +56,13 @@ var routes = [
     name: "About",
     icon: "ni ni-single-02 text-yellow",
     component: About,
+    layout: "/admin",
+  },
+  {
+    path: "/upload",
+    name: "Upload",
+    icon: "ni ni-single-02 text-yellow",
+    component: Upload,
     layout: "/admin",
   },
 ];

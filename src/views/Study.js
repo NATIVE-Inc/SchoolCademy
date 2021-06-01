@@ -48,7 +48,7 @@ const Study = (props) => {
 			<Container className="col-12 col-lg-12 no-padding">
 				<Sidebar
 					sidebar={<SectionSidebar parts={parts} />}
-					open={sidenav}
+					open={Boolean(sidenav)}
 					onSetOpen={openSideNav}
 					styles={{
 						root: {
@@ -103,14 +103,12 @@ const Study = (props) => {
 				>
 						<Row className="studyHeader">
 							<Col lg={9} className="studyHeaderContents col-10">
-								<p>
 									<Button outline color="primary" type="button" onClick={openSideNav}>
 										<span className="btn-inner--icon">
 											<i className="ni ni-bullet-list-67"></i>
 										</span>
 									</Button>
 									<span>Practice home / Introduction / Random</span>
-								</p>
 								<h1 className="display-1 mb-0">{title}</h1>
 								<small> 5 Parts | Multiple Choice </small>
 							</Col>

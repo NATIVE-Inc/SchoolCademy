@@ -24,8 +24,9 @@ const Topics = (props) => {
 
 	// get data before component mounts
 	useEffect(() => {
-		if (localStorage.getItem('localTopics') === 'null' || localStorage.getItem('currentSubject') !== subject) {  // fetches data if there no data or if subject is different 
-			// fetching topics list
+		if (localStorage.getItem('localTopic_' + subject) === null) {
+			// put each subject in its own variable to avoid fetching for thesame data multiple times 
+			console.log('got in the if');
 			axios
 				.post(BACKEND_API + 'topics', {
 					topicsArray: topicsArray,
@@ -33,8 +34,8 @@ const Topics = (props) => {
 				.then((res) => {
 					// fetching data
 					setTopics(res.data);
-					localStorage.setItem('localTopics', JSON.stringify(res.data));
-					localStorage.setItem('currentSubject', subject); 
+					localStorage.setItem('localTopic_' + subject, JSON.stringify(res.data));
+					localStorage.setItem('currentSubject', subject);
 				})
 				.catch((error) => {
 					// Error
@@ -42,7 +43,8 @@ const Topics = (props) => {
 					console.log(error);
 				});
 		} else {
-			setTopics(JSON.parse(localStorage.getItem('localTopics')));
+			console.log('got in the else');
+			setTopics(JSON.parse(localStorage.getItem('localTopic_' + subject)));
 		}
 
 		
