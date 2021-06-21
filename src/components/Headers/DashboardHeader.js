@@ -24,32 +24,20 @@ const Header = () => {
 						<Row className="pl-lg-8 pt-lg-6 d-flex">
 							<Col lg="6">
 								<h1 className="display-2 text-white header-title">
-									Measure, improve and report on your social media impact with confidence.
+									JOIN OUR VIRTUAL LEARNING COMMUNITY
 								</h1>
 								<h3 className="text-white header-subtitle">
 									<br />
 									<br />
-									Keyhole’s social listening, influencer tracking and social media analytics products
-									help marketers improve their social media strategy, and prove their impact to
-									colleagues and clients.
+									CADEMY delivers a fully interactive education from the comfort of your home or wherever you may be. Our unique online school offers the best in Primary, Secondary and A Level courses, delivered by expert teachers. We are able to offer you everything you expect from a school, plus a whole lot more!
 									<br />
 									<br />
 								</h3>
-								<h3 className="text-white header-subtitle">
-									Keyhole’s easy-to-use dashboard allows you to build and share reports instantly,
-									saving hundreds of hours a year.
-									<br />
-									<br />
-								</h3>
-								<Button className="btn-icon btn-3 ml-1" color="primary" type="button">
-									<span className="btn-inner--text">GET STARTED</span>
-									<span className="btn-inner--icon mr-1">
-										<i className="ni ni-bag-17" />
-									</span>
-								</Button>
-								<p className="text-white pl-2">
-									<br />
-									<span className="btn-inner--icon mr-1">
+								<p className="text-white">
+									<Button className="btn-icon btn-3 ml-1" color="primary" type="button">
+										<span className="btn-inner--text">GET STARTED</span>
+									</Button>
+									<span className="btn-inner--icon mr-1 pl-2">
 										<i className="ni ni-bag-17" />
 									</span>
 									No Credit Card Required
@@ -66,21 +54,18 @@ const Header = () => {
 							<Row>
 								<div className="col">
 									<CardTitle tag="h5" className="text-uppercase text-muted mb-0">
-										Traffic
+										Students
 									</CardTitle>
-									<span className="h2 font-weight-bold mb-0">350,897</span>
+									<span className="h2 font-weight-bold mb-0">30+</span>
 								</div>
 								<Col className="col-auto">
 									<div className="icon icon-shape bg-danger text-white rounded-circle shadow">
-										<i className="fas fa-chart-bar" />
+										<i className="fas fa-child" />
 									</div>
 								</Col>
 							</Row>
 							<p className="mt-3 mb-0 text-muted text-sm">
-								<span className="text-success mr-2">
-									<i className="fa fa-arrow-up" /> 3.48%
-								</span>{' '}
-								<span className="text-nowrap">Since last month</span>
+								from over 10 Regions
 							</p>
 						</CardBody>
 					</Card>
@@ -91,21 +76,18 @@ const Header = () => {
 							<Row>
 								<div className="col">
 									<CardTitle tag="h5" className="text-uppercase text-muted mb-0">
-										New users
+										Lessons
 									</CardTitle>
-									<span className="h2 font-weight-bold mb-0">2,356</span>
+									<span className="h2 font-weight-bold mb-0">1,000+</span>
 								</div>
 								<Col className="col-auto">
 									<div className="icon icon-shape bg-warning text-white rounded-circle shadow">
-										<i className="fas fa-chart-pie" />
+										<i className="fas fa-book" />
 									</div>
 								</Col>
 							</Row>
 							<p className="mt-3 mb-0 text-muted text-sm">
-								<span className="text-danger mr-2">
-									<i className="fas fa-arrow-down" /> 3.48%
-								</span>{' '}
-								<span className="text-nowrap">Since last week</span>
+									Live interactive lessons
 							</p>
 						</CardBody>
 					</Card>
@@ -116,21 +98,18 @@ const Header = () => {
 							<Row>
 								<div className="col">
 									<CardTitle tag="h5" className="text-uppercase text-muted mb-0">
-										Sales
+										Teachers
 									</CardTitle>
-									<span className="h2 font-weight-bold mb-0">924</span>
+									<span className="h2 font-weight-bold mb-0">50+</span>
 								</div>
 								<Col className="col-auto">
-									<div className="icon icon-shape bg-yellow text-white rounded-circle shadow">
+									<div className="icon icon-shape bg-green text-white rounded-circle shadow">
 										<i className="fas fa-users" />
 									</div>
 								</Col>
 							</Row>
 							<p className="mt-3 mb-0 text-muted text-sm">
-								<span className="text-warning mr-2">
-									<i className="fas fa-arrow-down" /> 1.10%
-								</span>{' '}
-								<span className="text-nowrap">Since yesterday</span>
+									fully qualified teachers 
 							</p>
 						</CardBody>
 					</Card>
@@ -141,21 +120,18 @@ const Header = () => {
 							<Row>
 								<div className="col">
 									<CardTitle tag="h5" className="text-uppercase text-muted mb-0">
-										Perform
+										Awards
 									</CardTitle>
-									<span className="h2 font-weight-bold mb-0">49,65%</span>
+									<span className="h2 font-weight-bold mb-0">100+ </span>
 								</div>
 								<Col className="col-auto">
-									<div className="icon icon-shape bg-info text-white rounded-circle shadow">
-										<i className="fas fa-percent" />
+									<div className="icon icon-shape bg-blue text-white rounded-circle shadow">
+										<i className="fas fa-gift" />
 									</div>
 								</Col>
 							</Row>
 							<p className="mt-3 mb-0 text-muted text-sm">
-								<span className="text-success mr-2">
-									<i className="fas fa-arrow-up" /> 12%
-								</span>{' '}
-								<span className="text-nowrap">Since last month</span>
+								Certifications issued 
 							</p>
 						</CardBody>
 					</Card>

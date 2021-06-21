@@ -11,8 +11,24 @@ const Footer = () => {
 				<h1 className="display-3 header-title text-white">Life is short and the internet is vast.</h1>
 				<hr />
 				<Row>
-					<Col xl={3}>CADEMY</Col>
 					<Col xl={3}>
+					<h1 className="text-gray">CADEMY</h1>
+					<p>Online learning for African Students</p>
+					<p>
+						<span className="btn-inner--icon mr-1">
+							<i className="ni ni-chat-round" />
+						</span>
+						+237 677 77 77 77
+					</p>
+					<p>
+						<span className="btn-inner--icon mr-1">
+							<i className="ni ni-email-83" />
+						</span>
+						contact@cademy.com
+					</p>
+					</Col>
+					<Col xl={3}>
+						<h5 className="text-gray">Our School</h5>
 						<Nav className="nav-footer d-block">
 							<NavItem>
 								<NavLink
@@ -20,7 +36,7 @@ const Footer = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Business Analytics
+									About Us
 								</NavLink>
 							</NavItem>
 
@@ -30,7 +46,7 @@ const Footer = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Sql
+									How it works? 
 								</NavLink>
 							</NavItem>
 
@@ -40,7 +56,7 @@ const Footer = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Data Engineer
+									Conditions of Attendance 
 								</NavLink>
 							</NavItem>
 
@@ -50,7 +66,7 @@ const Footer = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Data Analyst
+									School Policy
 								</NavLink>
 							</NavItem>
 							<NavItem>
@@ -59,21 +75,13 @@ const Footer = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Intro to Programming
-								</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink
-									href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md?ref=adr-admin-footer"
-									rel="noopener noreferrer"
-									target="_blank"
-								>
-									Digital Marketing
+									Homeschooling Online
 								</NavLink>
 							</NavItem>
 						</Nav>
 					</Col>
 					<Col xl={3}>
+						<h5 className="text-gray">Learning Stages</h5>
 						<Nav className="nav-footer d-block">
 							<NavItem>
 								<NavLink
@@ -81,7 +89,7 @@ const Footer = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Business Analytics
+									Primary
 								</NavLink>
 							</NavItem>
 
@@ -91,7 +99,7 @@ const Footer = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Sql
+									Secondary
 								</NavLink>
 							</NavItem>
 
@@ -101,40 +109,14 @@ const Footer = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Data Engineer
+									University
 								</NavLink>
 							</NavItem>
 
-							<NavItem>
-								<NavLink
-									href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md?ref=adr-admin-footer"
-									rel="noopener noreferrer"
-									target="_blank"
-								>
-									Data Analyst
-								</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink
-									href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md?ref=adr-admin-footer"
-									rel="noopener noreferrer"
-									target="_blank"
-								>
-									Intro to Programming
-								</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink
-									href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md?ref=adr-admin-footer"
-									rel="noopener noreferrer"
-									target="_blank"
-								>
-									Digital Marketing
-								</NavLink>
-							</NavItem>
 						</Nav>
 					</Col>
 					<Col xl={3}>
+						<h5 className="text-gray">Updates</h5>
 						<Nav className="nav-footer d-block">
 							<NavItem>
 								<NavLink
@@ -142,7 +124,7 @@ const Footer = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Business Analytics
+									Latest News
 								</NavLink>
 							</NavItem>
 
@@ -152,7 +134,7 @@ const Footer = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Sql
+									Upcoming Events
 								</NavLink>
 							</NavItem>
 
@@ -162,7 +144,7 @@ const Footer = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Data Engineer
+									Blog
 								</NavLink>
 							</NavItem>
 
@@ -172,25 +154,7 @@ const Footer = () => {
 									rel="noopener noreferrer"
 									target="_blank"
 								>
-									Data Analyst
-								</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink
-									href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md?ref=adr-admin-footer"
-									rel="noopener noreferrer"
-									target="_blank"
-								>
-									Intro to Programming
-								</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink
-									href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md?ref=adr-admin-footer"
-									rel="noopener noreferrer"
-									target="_blank"
-								>
-									Digital Marketing
+									Videos
 								</NavLink>
 							</NavItem>
 						</Nav>

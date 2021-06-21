@@ -19,7 +19,7 @@ const Upload = (props) => {
 						<h1 className="display-1 mb-0">Charger des Cours</h1>
 					</Col>
 				</Row>
-				<Row className="studyHeaderContents col-lg-10">
+				<Form className="studyHeaderContents col-lg-10 row">
 					<Col md="3">
 						<Col>
 							<FormGroup>
@@ -38,7 +38,7 @@ const Upload = (props) => {
 						<Col>
 							<FormGroup>
 								<label>Select Subject</label>
-								<Input id="exampleFormControlSelect1" type="select">
+								<Input required type="select">
 									<option selected disabled>
 										choose subject
 									</option>
@@ -51,7 +51,7 @@ const Upload = (props) => {
 						</Col>
 						<Col>
 							<FormGroup>
-								<label htmlFor="exampleFormControlSelect1">Select Section </label>
+								<label>Select Section </label>
 
 								<Button
 									outline
@@ -69,7 +69,7 @@ const Upload = (props) => {
 										<i className="ni ni-fat-add"></i>
 									</span>
 								</Button>
-								<Input id="exampleFormControlSelect1" type="select">
+								<Input type="select">
 									<option selected disabled>
 										choose section
 									</option>
@@ -84,8 +84,19 @@ const Upload = (props) => {
 						</FormGroup>
 						<h3>Content</h3>
 						<CKEditor />
+						<Button
+							color="primary"
+							onClick={toggle}
+							type="submit"
+							style={{
+								float: 'right',
+								margin: 10,
+							}}
+						>
+							Submit
+						</Button>
 					</Col>
-				</Row>
+				</Form>
 			</Container>
 			<div>
 				<Modal isOpen={modal} toggle={toggle} className={className}>

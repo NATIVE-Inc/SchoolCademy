@@ -106,19 +106,18 @@ const Index = (props) => {
 			{/* Page content */}
 			<section className="section section-lg pt-8 pb-8">
 				<Container className="justify-content-center text-center">
-					<h1 className="display-3 header-title">Keyhole for</h1>
+					<h1 className="display-3 header-title">Categories</h1>
 					<Row className="row-grid align-items-center pt-4">
 						<Col className="order-md-3" md="4">
 							<img
 								title="Brand_Monitoring"
-								alt="Brand_Monitoring - Social Listening"
-								src={require('../assets/img/theme/angular.jpg').default}
+								alt="features"
+								src={require('../assets/img/theme/primary.png').default}
 								width="100px"
 							></img>
-							<h1>Campaign Tracking </h1>
+							<h1>PRIMARY </h1>
 							<p className="subtitle">
-								Measure and analyze your campaigns from start to finish. Optimize your strategy
-								throughout for better results with transparent.
+								Pupils as young as 8 years of age have the chance to go to school online. Our qualified and experienced primary school teachers focus on developing young learners.
 							</p>
 							<Button className="btn-icon btn-3 ml-1" color="regular" type="button">
 								<span className="btn-inner--text">Learn More...</span>
@@ -127,14 +126,13 @@ const Index = (props) => {
 						<Col className="order-md-2" md="4">
 							<img
 								title="Brand_Monitoring"
-								alt="Brand_Monitoring - Social Listening"
-								src={require('../assets/img/theme/angular.jpg').default}
+								alt="features"
+								src={require('../assets/img/theme/secondary.png').default}
 								width="100px"
 							></img>
-							<h1>Influencer Marketing</h1>
+							<h1>SECONDARY</h1>
 							<p className="subtitle">
-								Who says you can’t buy love? Use Keyhole to discover, screen and optimize the
-								performance of your influencer partnerships.
+								Study all the subjects to prepare you for all the national examinations, we guide and track your progress leading up to the exams and afterwards. 
 							</p>
 							<Button className="btn-icon btn-3 ml-1" color="regular" type="button">
 								<span className="btn-inner--text">Learn More...</span>
@@ -143,14 +141,13 @@ const Index = (props) => {
 						<Col className="order-md-1" md="4">
 							<img
 								title="Brand_Monitoring"
-								alt="Brand_Monitoring - Social Listening"
-								src={require('../assets/img/theme/angular.jpg').default}
+								alt="features"
+								src={require('../assets/img/theme/university.png').default}
 								width="100px"
 							></img>
-							<h1>Social Listening & Analytics</h1>
+							<h1>UNIVERSITY</h1>
 							<p className="subtitle">
-								Monitor real-time conversations to protect your brand online, stay ahead of competitors
-								and improve your social media strategy.
+								Explore Courses from the different University programs which covers a variety of topics. Curated material from professors across the country. 
 							</p>
 							<Button className="btn-icon btn-3 ml-1" color="regular" type="button">
 								<span className="btn-inner--text">Learn More...</span>
@@ -161,55 +158,43 @@ const Index = (props) => {
 			</section>
 			<section className="section section-lg bg-gradient-lighter  pt-4 pb-4">
 				<Container>
-					<Row className="row-grid  pb-100 pt-100">
+					<Row className="row-grid  pb-50 pt-100">
 						<Col className="order-md-2" md="6">
 							<img alt="..." className="img-fluid" src={process.env.PUBLIC_URL + '/mathematics.jpg'} />
 						</Col>
 						<Col className="order-md-1" md="6">
 							<h1 className="display-4 header-title">
-								Prove your impact with instant reports from your social monitoring
+								WHY YOU SHOULD CHOOSE US
 							</h1>
-							<p>Showing off your hard work is the easy part.</p>
 							<p>
-								Measure all your social media efforts with Keyhole’s beautiful, comprehensive reports,
-								and share them with colleagues, managers & clients easily.
+							<br/>
+							Our online school is unique in its flexibility, approach and accessibility. Effective classroom learning without interruptions allows pupils to progress in their learning giving them time to pursue other interests.
 							</p>
 							<p>
-								“I feel really confident on the numbers we get from Keyhole. The numbers help us prove
-								the impact of what we’re doing to clients.” – Windsor Hanger-Western, Cofounder,
-								HerCampus Media
+								Our online classrooms let you manage how you interact with your peers and you have direct and confidential access to the teacher at all times. Our online courses mean you can organise your studies. The effectiveness of our learning platform means that you are able to watch missed lessons back in full, giving you an unrivalled opportunity to pursue their own interests, hobbies, pastimes and goals without missing any classes.
 							</p>
+							<br/>
 							<Button className="btn-1" color="primary" outline type="button">
-								Start Now
+								Learn more...
 							</Button>
 						</Col>
 					</Row>
 				</Container>
 				<Container>
-					<Row className="row-grid  pb-100 pt-100">
+					<Row className="row-grid  pb-50 pt-100">
 						<Col className="order-md-1" md="6">
 							<img alt="..." className="img-fluid" src={process.env.PUBLIC_URL + '/chemistry.jpg'} />
 						</Col>
 						<Col className="order-md-2" md="6">
 							<h1 className="display-4 header-title">
-								Save time and take control of the social media analytics you need
+								WE ARE HERE FOR YOU
 							</h1>
-							<i>
-								<br />
-								All your social media analytics simplified.
-							</i>
 							<p>
 								<br />
-								Don’t have a full data science team to analyze and report on every online conversation?
-								With our vast social listening and brand monitoring features, Keyhole will have your
-								insights ready in minutes with no data scientist required.
-							</p>
-							<p>
-								“So easy to use, you won’t waste time retraining your team or reading countless
-								tutorials.” – Customer on G2
+								No matter where you are in the world or what challenges your child faces, our teachers and management staff are dedicated to supporting your family throughout your child’s educational journey. With a team culture rooted in fairness and transparency, we strive to offer a rich, inclusive and accessible education where our pupils feel supported and, most of all, enjoy learning.
 							</p>
 							<Button className="btn-1" color="primary" outline type="button">
-								Learn More About
+								Learn more...
 							</Button>
 						</Col>
 					</Row>
@@ -221,18 +206,16 @@ const Index = (props) => {
 						</Col>
 						<Col className="order-md-1" md="6">
 							<h1 className="display-4 header-title">
-								Influencer Marketing with no spreadsheets or screenshots
+								WHY ONLINE SCHOOLING? 
 							</h1>
-							<p>Showing off your hard work is the easy part.</p>
 							<p>
-								Measure all your social media efforts with Keyhole’s beautiful, comprehensive reports,
-								and share them with colleagues, managers & clients easily.
+								<br/>
+								Online schooling has the power and the potential to transform the prospects of young people all over the world. It’s an approach that opens doors and widens horizons, offering every pupil greater access to quality education and a greater opportunity to fulfil their potential.
 							</p>
 							<p>
-								“I feel really confident on the numbers we get from Keyhole. The numbers help us prove
-								the impact of what we’re doing to clients.” – Windsor Hanger-Western, Cofounder,
-								HerCampus Media
+								While lessons may be remote and classes virtual, the impact is very real – nurturing a generation of happy, well-rounded and resilient pupils who love independent learning and can’t wait to get up for school in the morning.
 							</p>
+							<br/>
 							<Button className="btn-1" color="primary" outline type="button">
 								Start Now
 							</Button>
@@ -244,40 +227,31 @@ const Index = (props) => {
 				<Container className="pt-lg pt-100 pb-100">
 					<Row className="text-center justify-content-center">
 						<Col lg="10">
-							<h2 className="display-3 text-white header-title">À PROPOS DE NOUS</h2>
+							<h2 className="display-3 text-white header-title">About Us</h2>
 							<p className="text-white pt-4">
-								Conçu pour les écoles africaines avec une gamme d'outils pour aider les étudiants à
-								comprendre les sujets et les sujets et à mieux réussir aux concours et aux examens. Pour
-								les enseignants, il fournit une bibliothèque de leçons et d’éléments d’évaluation
-								faciles à utiliser qui les aident à identifier les zones de carence des élèves afin
-								qu’ils puissent améliorer tous les élèves de leur classe - les faibles et les forts
-								ensemble
+								Established with one simple aim: to improve the educational possibilities for young people. We recognise that pupils learn in all different ways and at different paces. That’s why we’ve chosen to create an alternative pathway to the traditional one-size-fits-all approach to education.
+							</p>
+							<p>
+								Our schools provide a full-time British education online to all children of school age. We believe that all young people deserve access to a quality education, which is why all of our teaching is based online. In doing so, we have opened the doors for pupils worldwide to study the highly regarded English National Curriculum.
 							</p>
 						</Col>
 					</Row>
 				</Container>
 			</section>
 
-			<section className="section section-lg bg-gradient-pink  pt-4 pb-4">
+			<section className="section section-lg bg-gradient-pink ">
 				<Container className="pt-lg pt-100 pb-100">
 					<h2 className="display-3 header-title text-center justify-content-center">
-						The latest on Social Media Analytics, Influencer Marketing and Social Listening
+						Features 
 					</h2>
-					<Row className="pt-4">
+					<Row className="pt-3">
 						<Col md={4}>
 							<Card className="shadow shadow-lg--hover ml-2 mr-2">
 								<CardBody>
-									<div className="icon icon-shape bg-gradient-success rounded-circle text-white">
-										<i className="ni ni-satisfied" />
-									</div>
-									<h5 className="title text-success">Awesome Support</h5>
+									<h2 className="title text-success">How We Teach</h2>
 									<p>
-										The Arctic Ocean freezes every winter and much of the sea-ice then thaws every
-										summer, and that process will continue whatever.
+										We’ve harnessed the power of technology to develop a system that works. We can deliver the standard of teaching that supports their achievement and drives their development. We’ll provide access to our online school portal where you can find class pages for each of their chosen subjects.
 									</p>
-									<a className="text-success" href="#pablo" onClick={(e) => e.preventDefault()}>
-										Learn more
-									</a>
 								</CardBody>
 							</Card>
 						</Col>
@@ -286,17 +260,10 @@ const Index = (props) => {
 
 						<Card className="shadow shadow-lg--hover ml-2 mr-2">
 							<CardBody>
-								<div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
-									<i className="ni ni-active-40" />
-								</div>
-								<h5 className="title text-warning">Modular Components</h5>
+								<h2 className="title text-warning">View Our Courses</h2>
 								<p>
-									The Arctic Ocean freezes every winter and much of the sea-ice then thaws every
-									summer, and that process will continue whatever.
+									we teach the English National Curriculum. It’s a well-established curriculum that’s recognised for offering a broad, balanced and progressive education. Having been developed in the late 1980s, it has been reviewed regularly ever since, ensuring every programme and every subject is relevant and up to date. 
 								</p>
-								<a className="text-warning" href="#pablo" onClick={(e) => e.preventDefault()}>
-									Learn more
-								</a>
 							</CardBody>
 						</Card>
 						</Col>
@@ -304,17 +271,10 @@ const Index = (props) => {
 
 						<Card className="shadow shadow-lg--hover ml-2 mr-2">
 							<CardBody>
-								<div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
-									<i className="ni ni-active-40" />
-								</div>
-								<h5 className="title text-warning">Modular Components</h5>
+								<h2 className="title text-info">Course Fees</h2>
 								<p>
-									The Arctic Ocean freezes every winter and much of the sea-ice then thaws every
-									summer, and that process will continue whatever.
+									We’re committed to providing high standards at a reasonable cost. We believe that we offer an accessible, engaging education at a fraction of the cost of many private or international schools. The cost of our Online Schooling covers a wide range of services and benefits providing quality content to every level.
 								</p>
-								<a className="text-warning" href="#pablo" onClick={(e) => e.preventDefault()}>
-									Learn more
-								</a>
 							</CardBody>
 						</Card>
 							</Col>
@@ -325,8 +285,7 @@ const Index = (props) => {
 				<Container>
 					<Row className="justify-content-center text-center mb-lg">
 						<Col lg="8">
-							<h2 className="display-3">La formidable équipe</h2>
-							<p className="text-muted">le but est de transformer l'accès à l'éducation.</p>
+							<h2 className="display-3">The Team</h2>
 						</Col>
 					</Row>
 					<Row>
